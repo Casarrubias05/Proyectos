@@ -1,0 +1,145 @@
+\documentclass[11pt, spanish]{article}
+\usepackage{amssymb, amscd, amsthm, amsfonts, mathtools, mathrsfs, braket}
+\mathtoolsset{showonlyrefs,showmanualtags}
+\usepackage{graphicx, float}
+\usepackage{asymptote}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+urlcolor = cyan,
+linkcolor=blue,
+citecolor=brown}
+\usepackage[spanish,es-nodecimaldot, es-tabla]{babel}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty}
+\DeclareSIUnit{\atm}{\text{atm}}
+
+\usepackage{upgreek}
+\usepackage[minimal = true]{chemmacros}
+\usepackage{cancel}
+
+\usepackage{multicol, multirow}
+\usepackage{wrapfig}
+
+\usepackage{blindtext}
+
+\usepackage[lastexercise]{exercise}
+\renewcommand{\AtBeginExercise}{\itshape}
+
+\usepackage{booktabs}
+
+\setlength{\headheight}{14pt}
+
+\usepackage{lastpage}
+
+\usepackage[margin=2.5cm]{geometry}
+
+\usepackage{esint}
+\usepackage{booktabs}
+
+
+\usepackage{enumerate}
+\usepackage{nicefrac}
+
+
+\usepackage[font=small]{caption}
+\usepackage{subcaption}
+
+\usepackage{esint, csquotes}
+\usepackage[
+	style=apa
+]{biblatex}
+\addbibresource{Bibliografia.bib}
+\usepackage{xurl}
+
+\setlength{\headheight}{14pt}
+
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 40pt
+\marginparsep 10pt
+\topmargin -20pt
+\headsep 10pt
+\textheight 8.7in
+
+\renewcommand{\vec}{\mathbf} %Reescribe a los vectores en negritas y no con una flechita
+\newcommand{\univ}[1]{\, \mathbf{u}_{#1}} % Facilita la escritura de vectores unitarios
+\newcommand{\eqcomma}{\,  ,}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\r}{\vec r}
+\newcommand{\eqperiod}{\,  .}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\bfgreek}[1]{\boldsymbol{#1}}
+\newcommand{\surface}{\mathcal S}
+\newcommand{\tangent}{\boldsymbol{\mathfrak{t}}}
+\newcommand{\normal}{\boldsymbol{\mathfrak{n}}}
+\newcommand{\binormal}{\boldsymbol{\mathfrak{b}}}
+\newcommand{\bracket}[1]{\left\langle #1 \right\rangle}
+\newcommand{\jacobian}[2]{\frac{\partial(#1)}{\partial(#2)}}
+\newcommand{\EC}[1][1]{\frac{#1}{4\pi\epsilon_0}}
+\newcommand{\norm}[1]{\abs{\vec{#1}}}
+\newcommand{\dotp}[2]{\vec{#1} \cdot \vec{#2}}
+
+\renewcommand\qedsymbol{$\blacksquare$}%Hace un cuadrado negro el qed de una demostración
+\newtheorem{theorem}{Teorema} %Crea el entorno de teorema
+\newtheorem{corollary}{Corolario}
+\newtheorem{lemma}{Lema}
+\newtheorem{definition}{Definición}
+
+\newcommand{\eto}[1]{e^{#1}}
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsenh}{arc\ senh}
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\title{
+	\textbf{Práctica 5\\
+Lentes delgadas}
+}
+\author{Luis Arturo Ureña Casarrubias\\
+Alicia Aldana Pérez\\
+José Antonio Aguilar Ibarra\\\\
+Laboratorio de Óptica}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\abstract{
+}
+
+\begin{multicols}{2}
+
+\section{Introducción}
+\input{introduccion}
+
+\section{Marco Teórico}\label{sec: teo}
+\input{marcoTeorico}
+
+\section{Metodología Experimental}
+\input{metodologia}
+
+\section{Resultados} \label{sec: res}
+\end{multicols}
+\input{resultados}
+
+\begin{multicols}{2}
+\section{Conclusiones}
+
+
+
+\end{multicols}
+\nocite{*}
+\printbibliography
+
+\end{document}
