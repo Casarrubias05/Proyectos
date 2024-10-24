@@ -1,0 +1,261 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{BornWolf1999}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f3c12b2ab192a232977c790c202ae18a}{%
+           family={Born},
+           familyi={B\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f3da79454ab0edb86f37a6038d1998f}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{fullhash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{bibnamehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{authorbibnamehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{authornamehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{authorfullhash}{b14dea9f75ec6824071689113c5b3d02}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{7th}
+      \field{isbn}{978-0521642224}
+      \field{title}{Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light}
+      \field{year}{1999}
+      \true{nocite}
+    \endentry
+    \entry{Hecht2017}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9a6efa2d012e3aaa08e4b6a8cf6a8b4c}{%
+           family={Hecht},
+           familyi={H\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{fullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{bibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorbibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authornamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorfullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{isbn}{978-0133977226}
+      \field{title}{Optics}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{Pedrotti2020}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3be4ff5736ba25426151cb98ccade72}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Frank\bibnamedelima L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=464252ee04186f10fa523b249bfa606d}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7dadcf78604c09cde6200ed114b44f92}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{fullhash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \strng{bibnamehash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \strng{authorbibnamehash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \strng{authornamehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{authorfullhash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-1108428262}
+      \field{title}{Introduction to Optics}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/books/introduction-to-optics/
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/books/introduction-to-optics/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{BornWolf1999}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f3c12b2ab192a232977c790c202ae18a}{%
+           family={Born},
+           familyi={B\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f3da79454ab0edb86f37a6038d1998f}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Emil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{fullhash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{bibnamehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{authorbibnamehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{authornamehash}{b14dea9f75ec6824071689113c5b3d02}
+      \strng{authorfullhash}{b14dea9f75ec6824071689113c5b3d02}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{7th}
+      \field{isbn}{978-0521642224}
+      \field{title}{Principles of Optics: Electromagnetic Theory of Propagation, Interference and Diffraction of Light}
+      \field{year}{1999}
+      \true{nocite}
+    \endentry
+    \entry{Hecht2017}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9a6efa2d012e3aaa08e4b6a8cf6a8b4c}{%
+           family={Hecht},
+           familyi={H\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{fullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{bibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorbibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authornamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorfullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5th}
+      \field{isbn}{978-0133977226}
+      \field{title}{Optics}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{Pedrotti2020}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3be4ff5736ba25426151cb98ccade72}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Frank\bibnamedelima L.},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=464252ee04186f10fa523b249bfa606d}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7dadcf78604c09cde6200ed114b44f92}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{fullhash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \strng{bibnamehash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \strng{authorbibnamehash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \strng{authornamehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{authorfullhash}{3d9b8c09496ada28a690a3fea76fd7d1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-1108428262}
+      \field{title}{Introduction to Optics}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/books/introduction-to-optics/
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/books/introduction-to-optics/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
