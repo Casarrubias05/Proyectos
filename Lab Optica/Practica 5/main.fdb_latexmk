@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1729734594 "main.bcf" "main.bbl" "main" 1729734648 0
+["biber main"] 1729734594 "main.bcf" "main.bbl" "main" 1729735084 0
   "./Bibliografia.bib" 1729755292 846 e9e96b23741f633605890539defb1888 ""
-  "main.bcf" 1729734648 132944 1c85fa6be504ea5b27c6593df2e716bb "pdflatex"
+  "main.bcf" 1729735084 132944 1c85fa6be504ea5b27c6593df2e716bb "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1729734647 "/Users/GLaDOS_1/Documents/GitHub/Proyectos/Lab Optica/Practica 5/main.tex" "main.pdf" "main" 1729734648 0
-  "/Users/GLaDOS_1/Documents/GitHub/Proyectos/Lab Optica/Practica 5/main.tex" 1729734647 3253 2a21e5abc113ea88185f886eca945c15 ""
+["pdflatex"] 1729735083 "/Users/GLaDOS_1/Documents/GitHub/Proyectos/Lab Optica/Practica 5/main.tex" "main.pdf" "main" 1729735084 0
+  "/Users/GLaDOS_1/Documents/GitHub/Proyectos/Lab Optica/Practica 5/main.tex" 1729734745 3253 2a21e5abc113ea88185f886eca945c15 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -251,13 +251,13 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1698623062 4710157 f5dcfd8adc0c9f024185c31ffb13e255 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1698623085 8208520 71c104abfc848d50aedcc3b07b60a045 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "introduccion.tex" 1729755292 1007 2fdd0316c0f96f6028fbf29a0740a176 ""
-  "main.aux" 1729734648 1486 94495414a1862d93f63b7e3d5dca2f1e "pdflatex"
+  "introduccion.tex" 1729735082 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.aux" 1729735084 1486 94495414a1862d93f63b7e3d5dca2f1e "pdflatex"
   "main.bbl" 1729734607 9742 8cb16bb5eb135c99877dfbc4cea3e8df "biber main"
-  "main.out" 1729734648 585 ccb0a266aa4c283591beed741d0f6887 "pdflatex"
-  "main.pre" 1729734647 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.run.xml" 1729734648 2361 d4910943500d0419ae65c5e4c8ff33cd "pdflatex"
-  "main.tex" 1729734647 3253 2a21e5abc113ea88185f886eca945c15 ""
+  "main.out" 1729735084 585 ccb0a266aa4c283591beed741d0f6887 "pdflatex"
+  "main.pre" 1729735083 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.run.xml" 1729735084 2361 d4910943500d0419ae65c5e4c8ff33cd "pdflatex"
+  "main.tex" 1729734745 3253 2a21e5abc113ea88185f886eca945c15 ""
   "marcoTeorico.tex" 1729733845 0 d41d8cd98f00b204e9800998ecf8427e ""
   "metodologia.tex" 1729733854 0 d41d8cd98f00b204e9800998ecf8427e ""
   "resultados.tex" 1729733883 36 61e113c84f7019ce1134244950b00dfa ""
