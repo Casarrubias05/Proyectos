@@ -1,0 +1,157 @@
+\documentclass[11pt, spanish]{article}
+\usepackage{amssymb, amscd, amsthm, amsfonts, mathtools, mathrsfs, tensor, braket, etoolbox}
+\numberwithin{equation}{section}
+\mathtoolsset{showonlyrefs,showmanualtags}
+\usepackage{graphicx, float}
+\usepackage{asymptote}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+urlcolor = cyan,
+linkcolor=blue,
+citecolor=brown}
+\usepackage[spanish,es-nodecimaldot, es-tabla]{babel}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty}
+\DeclareSIUnit{\atm}{\text{atm}}
+
+\usepackage{upgreek}
+\usepackage[minimal = true]{chemmacros}
+\usepackage{cancel}
+
+\usepackage{multicol, multirow}
+\usepackage{wrapfig}
+
+%\usepackage{blindtext}
+
+\usepackage[lastexercise]{exercise}
+\renewcommand{\AtBeginExercise}{\itshape}
+
+\usepackage{booktabs}
+
+\setlength{\headheight}{14pt}
+
+\usepackage{lastpage}
+
+\usepackage[margin=2.5cm]{geometry}
+
+\usepackage{esint}
+\usepackage{booktabs}
+
+
+\usepackage{enumerate}
+\usepackage{nicefrac}
+
+
+\usepackage[font=small]{caption}
+\usepackage{subcaption}
+
+\usepackage{esint, csquotes}
+\usepackage[
+	backend=biber,
+	style=apa
+]{biblatex}
+\addbibresource{Bibliografia.bib}
+\usepackage{xurl}
+
+% \usepackage[skip=10pt plus80pt]{parskip}
+
+\setlength{\headheight}{14pt}
+
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 40pt
+\marginparsep 10pt
+\topmargin -20pt
+\headsep 10pt
+\textheight 8.7in
+
+\renewcommand{\vec}{\mathbf} %Reescribe a los vectores en negritas y no con una flechita
+\newcommand{\univ}[1]{\hat{\vec{#1}}} % Facilita la escritura de vectores unitarios
+\newcommand{\eqcomma}{\,  ,}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\renewcommand{\r}{\vec r}
+\newcommand{\eqperiod}{\,  .}
+\newcommand{\bfgreek}[1]{\boldsymbol{#1}}
+\newcommand{\surface}{\mathcal S}
+\newcommand{\tangent}{\boldsymbol{\mathfrak{t}}}
+\newcommand{\normal}{\boldsymbol{\mathfrak{n}}}
+\newcommand{\binormal}{\boldsymbol{\mathfrak{b}}}
+\newcommand{\bracket}[1]{\left\langle #1 \right\rangle}
+\newcommand{\jacobian}[2]{\frac{\partial(#1)}{\partial(#2)}}
+\newcommand{\EC}[1][1]{\frac{#1}{4\pi\epsilon_0}}
+\newcommand{\dotp}[2]{\vec{#1} \cdot \vec{#2}}
+\newcommand{\crossp}[2]{\vec{#1} \times \vec{#2}}
+\newcommand{\Matrix}[1]{\begin{pmatrix}#1\end{pmatrix}} 
+
+\renewcommand\Re{\mathrm{Re}}
+\renewcommand\qedsymbol{$\blacksquare$}%Hace un cuadrado negro el qed de una demostración
+\newtheorem{theorem}{Teorema} %Crea el entorno de teorema
+\newtheorem{corollary}{Corolario}
+\newtheorem{lemma}{Lema}
+\newtheorem{definition}{Definición}
+
+\newcommand{\eto}[1]{e^{#1}}
+\renewcommand{\div}[1]{\nabla \cdot \vec{#1}}
+\newcommand{\rot}[1]{\nabla \times \vec{#1}}
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsenh}{arc\ senh}
+\DeclareMathOperator{\Span}{span}
+
+\DeclarePairedDelimiter{\abs}{\lvert }{\rvert}
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterXPP{\lnorm}[2]{}{\lVert}{\rVert}{_\ifblank{#2}{2}{#2}}{\ifblank{#1}{\: \cdot \:}{#1}}
+\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1 \delimsize \vert \mathopen{} #2}
+\DeclarePairedDelimiterX{\scalarp}[2]{\langle}{\rangle}{#1 , #2}
+
+
+\usepackage{titlesec}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat*{\paragraph}{\large\bfseries}
+\titleformat*{\subparagraph}{\large\bfseries}
+
+\title{
+	\textbf{Práctica 8\\
+	Difracción de la Luz}
+}
+\author{Luis Arturo Ureña Casarrubias\\
+Laboratorio de Óptica}
+\date{2 de diciembre de 2024}
+
+
+\begin{document}
+
+\maketitle
+
+\abstract{
+	En la literatura se justifican los patrones de difracción como una consecuencia del principio de Huygens-Fresnel, el cual afirma que la luz se propaga porque en cada punto de un frente de onda se regenera una segunda onda, y que es entonces la interferencia de estas ondas las que generan los patrones mencionados. En este trabajo obtenemos naturalemente una expresión matemática que describe el principio de Huygens-Fresnel, pero que explica porque las nuevas ondas generadas no se propagan en la dirección opuesta, y obtenemos expresiones para los patrones de difracción en la aproximación de \emph{campo lejano}.
+}
+
+\begin{multicols}{2}
+
+\input{introduccion}
+\end{multicols}
+
+\input{marcoTeorico}
+\begin{multicols}{2}
+\input{metodologia}
+
+\input{resultados}
+\end{multicols}
+\section{Conclusiones}
+En el siglo XIX la descripición de un patrón de difracción, que solo se observa en movimientos ondulatorios, generado con luz pareció poner fin al debate respecto a si la luz es una onda o una partícula. Aunque en el siguiente siglo se aceptó que la naturaleza de la luz es dual, en el regimen macróscopico una descripción ondulatoria de la luz es adecuada para describir las observaciones.
+
+Partiendo de un teorema integral fuimos capaces de obtener una expresión de la cual se desprende el principio de Huygens-Fresnel junto con detalles que su enunciado original no incluye. De él, tomando la aproximación de campo lejano, describimos la difracción de Fraunhofer a través de aperturas circulares y rendijas.
+
+De sus consecuencias pudimos obtener una medida de la validez de la aproximación de campo lejano, comparando las dimensiones de las aperturas reportadas con las calculadas, y concluimos que la aproximación es aceptable. La medición que resulta más llamativa por su simplicidad fue la del cabello humano, mostrando así que no se precisa de más que un láser, cinta y una regla para realizarla.
+
+%\nocite{*}
+\printbibliography
+
+\end{document}

@@ -1,0 +1,174 @@
+\section{Superficies en el Espacio}
+La ausencia de evidencia no implica una evidencia de ausencia. En este principio se basan los argumentos más empleados para combatir a los terraplanistas cuando ellos afirman que vivimos en un mundo plano, basándose en que no se puede percibir en el día a día la curvatura de la Tierra que asegura el modelo de ella más aceptado, el esférico.
+
+Para comenzar a dotar de precisión a esta discusión recurrimos a los mapas. Un mapa \textit{plano} de una región como una ciudad, un estado o incluso un país nos permite hacer una correspondencia entre nuestra posición y las dos coordenadas de latitud y longitud. Es decir, relacionamos nuestra posición en un mundo tridimensional con un punto en un plano. De manera concisa, decimos que localmente (en una porción muy pequeña de la Tierra en donde nos encontramos) el globo terráqueo es euclidiano.
+
+Esta es la idea central detrás de la geometría diferencial de superficies bidimensionales, que la extiende de la superficie de la Tierra a superficies más generales. Empezamos entonces con la siguiente definición de los conjuntos de interés.
+
+\begin{definition}\label{def: surface}
+	Un conjunto $\surface \subset \R^3$ es una \emph{superficie regular} si cada uno de sus puntos tiene una vecindad $V$ en $\surface$ que es difeomórfica a un conjunto abierto $U \subset \R^2$.
+	
+	Al difeomorfismo $\patch : U \to V$ se le conoce como un \emph{parche coordenado}, y a una colección de parches coordenados que cubre a todo $\surface$ se le llama un \emph{atlas de} $\surface$.
+\end{definition}
+
+Una propiedad de gran utilidad para poder emplear el lenguaje de álegbra lineal es el siguiente.
+\begin{proposition}
+	Sea $\patch$ un parche coordenado de $\surface$. Para toda $\vec q \in U$ la transformación lineal $D\patch(\vec q) \in \mathcal L(\R^2; \R^3)$ tiene rango dos.
+\end{proposition}
+Esto quiere decir que el espacio generado por los vectores $\patch_{,1}(\vec q), \patch_{,2}(\vec q)$ es bidimensional.
+\begin{equation}
+	\dim \Span(\patch_{,1}(\vec q), \patch_{,2}(\vec q)) = 2.
+\end{equation}
+Esto a su vez implica que los vectores $\patch_{,1}(\vec q), \patch_{,2}(\vec q)$ son linealmente independientes y forman una base de un subespacio bidimensional de $\R^3$: un plano.
+
+Para distinguir las coordenadas empleadas en los conjuntos $U \subset \R^2$ de las coordenadas cartesianas $x, y, z$ del espacio, denotaremos a las primeras por $q^1, q^2$ y las llamaremos coordenadas locales en $V$.
+
+Incluimos ahora las curvas pegadas a las superficies que habíamos mencionado anteriormente.
+\begin{definition}
+	Sea $\surface$ una superficie regular. Una \emph{curva regular en} $\surface$ es una curva regular en $\R^3$ cuya traza está contenida en $\surface$.
+	
+	El \emph{plano tangente} $T_{\vec p}\surface$ de $\surface$ en el punto $\vec p \in \surface$ es el conjunto de todas las velocidades iniciales de las curvas regulares en $\surface$ con posición inicial $\vec p$:
+	\begin{equation}
+		T_{\vec p}\surface \coloneqq \set{\dot{\vec c}(0) \ \rvert \ \mathrm{trace}(\vec c) \subset \surface, \vec c(0) = \vec p}.
+	\end{equation}
+\end{definition}
+
+La definición anterior para el plano tangente tiene la ventaja que es independiente del parche elegido para $\surface$; y una vez que se tiene un parche de $\surface$, se puede determinar fácilmente a $T_{\vec p}\surface$ con el siguiente resultado.
+\begin{lemma}
+	El conjunto $T_{\vec p}\surface$ de $\surface$ es un subespacio bidimensional de $\R^3$ y
+	\begin{equation}
+		T_{\vec p}\surface = \Span(\patch_{,1}(\vec q), \patch_{,2}(\vec q)).
+	\end{equation}
+\end{lemma}
+
+Para facilitar la construcción de curvas regulares en una superficie, que son los objetos de interés en este trabajo, aprovechamos la regla de la cadena de la siguiente forma.
+\begin{proposition}
+	Sea $\vec c : I \to U$ una curva regular y $\patch: U \to \surface$ un parche de $\surface$. La curva definida por
+	\begin{equation}\label{eq: gcurve}
+		\bgamma(\lambda) \coloneqq (\patch \circ \vec c)(\lambda),
+	\end{equation}
+	es regular en $\surface$.
+\end{proposition}
+\begin{proof}
+	Como la imagen de $\patch$ está en $\surface$, es evidente que la traza de $\bgamma$ está en $\surface$. Por la proposición \ref{prop: compSmooth}, $\patch \circ \vec c$ es suave y de la regla de la cadena
+	\begin{equation}
+		\dot \bgamma = \dot c^\mu \patch_{,\mu}(\vec c),
+	\end{equation}
+	como $\patch_{,\mu}$ son linealmente independientes, $\dot \bgamma$ solo se anularía si $\dot c^\mu = 0$ para $\mu = 1, 2$. Pero como $\vec c$ es regular, $\dot c^\mu$ siempre son diferentes de cero.
+\end{proof}
+
+\subsection{La Métrica Riemanniana}
+La idea de \emph{distancia en una superficie} que ocuparemos está definida a través de la longitud de arco de una curva regular en la superficie. Recordemos de álgebra lineal que al espacio vectorial $\R^n$ lo podemos dotar del producto interno estándar euclidiano $\innerp{}{}$ definido como
+\begin{equation}
+	\innerp{(x^1, \dotsc, x^n)}{(y^1, \dotsc, y^n)} \coloneqq \sum_{\mu=1}^n x^\mu y^\mu.
+\end{equation}
+Y que la norma que induce es la norma estándar euclidiana
+\begin{equation}
+	\norm{(x^1, \dotsc, x^n)} = \sqrt{\innerp{(x^1, \dotsc, x^n)}{(x^1, \dotsc, x^n)} } \,.
+\end{equation}
+Definimos, aparentemente fortuita por el momento, el concepto de métrica.
+\begin{definition}
+	La métrica $g : \R^n \times \R^n \to \R$ es la función bilineal simétrica definida por
+	\begin{equation}
+		g(\vec u, \vec v) \coloneqq \innerp{\vec u}{\vec v}.
+	\end{equation}
+\end{definition}
+
+Sin embargo, cuando se emplean bases $\{\vec e_\mu\}_{\mu=1}^n$ más generales de $\R^n$ se vuelve necesario introducir la matriz de la métrica $g$ respecto a la base $\{\vec e_\mu\}_{\mu=1}^n$.
+\begin{definition}
+	La matriz $\mathcal M(g, \{\vec e_\mu\}_{\mu=1}^n)$ de la métrica respecto a la base $\{\vec e_\mu\}_{\mu=1}^n$ es la matriz cuadrada $n \times n$ cuyos elementos son
+	\begin{equation}
+		g_{\mu\nu} \coloneqq g(\vec e_\mu, \vec e_\nu).
+	\end{equation}
+\end{definition}
+\begin{remark}
+	En la base estándar euclidiana, la matriz de $g$ es la delta de Kroenecker.
+	\begin{equation}
+		g_{\mu\nu} = g(\univ \mu, \univ \nu) = \innerp{\univ \mu}{\univ \nu} = \delta_{\mu\nu}.
+	\end{equation}
+\end{remark}
+\begin{remark}
+	Haber definido la matriz de la métrica nos permite aprovechar la convención de la suma de Einstein. Sea $\{\vec e_\mu\}_{\mu=1}^n$ una base de $\R^n$ y $\vec u = u^\mu \vec e_\mu$ y $\vec v = v^\nu \vec e_\nu$. Entonces
+	\begin{equation}
+		\innerp{\vec u}{\vec v} = u^\mu v^\nu \innerp{\vec e_\mu}{\vec e_\nu} = g_{\mu\nu}u^\mu v^\nu .
+	\end{equation}
+\end{remark}
+
+De manera ilustrativa calculamos el producto interno entre las velocidades de dos curvas regulares en $\surface$, $\bgamma_1, \bgamma_2 : I \to \surface$ de la forma \eqref{eq: gcurve}, tales que para alguna $\xi \in I$, $\vec c_1(\xi) = \vec c_2(\xi) = \vec q$.
+\begin{equation}
+	\innerp{\dot\bgamma_1(\xi)}{\dot \bgamma_2(\xi)} = \dot c_1^\mu(\xi) \dot c_2^\nu(\xi) g(\patch_{,\mu}(\vec c_1(\xi)), \patch_{,\nu}(\vec c_2(\xi)))
+	= \dot c_1^\mu(\xi) \dot c_2^\nu(\xi) g_{\mu\nu}(\vec q).
+\end{equation}
+Vemos entonces que el producto interno entre las dos curvas no depende solo de los valores de sus componentes, sino que también depende del valor de la métrica en cada punto de $\surface$.
+
+Esto nos lleva a la siguiente definición.
+\begin{definition}
+	Una métrica riemmaniana en una superficie regular es una regla de correspondencia que asocia a cada punto $\vec p \in \surface$ un producto interno $\innerp{}{}_{\vec p}$ \emph{diferenciable} en el espacio tangente $T_{\vec p}\surface$.
+	
+	Una superficie regular con una métrica riemanniana se le conoce como una \emph{superficie riemanniana}.
+\end{definition}
+En la definición anterior, que un producto interno $\innerp{}{}_{\vec p}$ sea diferenciable signfica que existe un parche $\patch : U \to \surface$ alrededor de $\vec p$ tal que
+\begin{equation}
+	\innerp{\patch_{,\mu}(\vec q)}{\patch_{,\nu}(\vec q)}_{\vec p} = g_{\mu\nu}(\vec q)
+\end{equation}
+es diferenciable en $U$. Cuando quedé claro que se está empleando el producto interno en $\vec p$ se omitirá este último.
+
+Podemos ahora llegar a una expresión para la longitud de arco de una curva regular en $\surface$ en coordenadas locales.
+\begin{remark}
+	Sea $\bgamma$ una curva como en la proposición \ref{eq: gcurve}, con $I = [a,b]$. Entonces su longitud de arco puede calcularse como
+	\begin{equation}\label{eq: surfArc}
+		\mathscr L(\bgamma) = \int_{a}^{b}\sqrt{g(\dot \bgamma, \dot \bgamma)} \, d\lambda
+		= \int_{a}^{b} \sqrt{
+			g_{\mu\nu} \dot c^\mu \dot c^\nu
+		}\, d\lambda.
+	\end{equation}
+\end{remark}
+
+\subsection{Símbolos de Christoffel}
+Como se estableció anteriormente, un parche $\patch$ de una superficie regular $\surface$ induce en cada punto $\vec p \in \surface$ una base del subespacio $T_{\vec p}\surface$. Del álgebra lineal sabemos que si introducimos un tercer vector linealmente independiente a $\patch_{,\mu}$ podemos generar una base de $\R^3$. Esto nos conduce a hacer la siguiente definición.
+\begin{definition}
+	Un \emph{vector normal} $\vec N \in \R^3$ en $\vec p$ a $\surface$ es un vector ortogonal a $T_\vec p\surface$.
+\end{definition}
+Entonces, la lista $\{\patch_{,1}(\vec q), \patch_{,2}(\vec q), \vec N(\vec q)\}$ es linealmente independiente en $\R^3$ y por lo tanto una base de $\R^3$.
+Por las propiedades del producto cruz en $\R^3$, la siguiente definición es la de un vector normal unitario a $\surface$ en $\patch(\vec q)$:
+\begin{equation}
+	\vec N(\patch(\vec q)) \coloneqq \frac{\patch_{,1}(\vec q) \times \patch_{,2}(\vec q)}{\norm{\patch_{,1}(\vec q) \times \patch_{,2}(\vec q)}}.
+\end{equation}
+
+La definición de métrica riemanniana nos conduce a buscar una expresión para $D g_{\alpha\beta}$. Determinamos entonces una expresión para las derivadas parciales de las componentes de la métrica.
+\begin{equation}
+	g_{\alpha\beta, \mu} = \partial_\mu \innerp{\patch_{,\alpha}}{\patch_{,\beta}}_{\vec p}
+	= \innerp{\patch_{,\alpha}}{\patch_{,\beta,\mu}}_{\vec p} + \innerp{\patch_{,\alpha, \mu}}{\patch_{,\beta}}_{\vec p}.
+\end{equation}
+
+Para poder expresar a las segundas derivadas parciales de $\patch$ con la base intrínsica\\ $\{\patch_{,1}(\vec q), \patch_{,2}(\vec q), \vec N(\vec q)\}$ a $\surface$ es necesario introducir los símbolos de Christoffel.
+\begin{definition}
+	Los símbolos de Christoffel $\ChrisSym{\alpha}{\mu\nu} : U \to \R$, donde $\alpha, \mu,\nu = \overline{1,2}$, se definen como las funciones que en cada punto $\vec p \in \surface$ satisfacen.
+	\begin{equation}
+		\patch_{,\mu,\nu} = \ChrisSym{\alpha}{\mu\nu} \patch_{,\alpha} + \innerp{\patch_{,\mu,\nu}}{\vec N}_\vec{p}\vec N.
+	\end{equation}
+	Por la conmutatividad de las derivadas parciales, los símbolos de Christoffel son simétricos en los subíndices:
+	\begin{equation}
+		\ChrisSym{\alpha}{\nu\mu} = \ChrisSym{\alpha}{\mu\nu}.
+	\end{equation}
+\end{definition}
+\begin{definition}[Derivada Covariante]
+	Sea $\surface$ superficie regular y $\vec c: I \to \surface$ una curva regular en $\surface$. Si $\vec v : I \to \R^3$ es una función suave tal que $\vec v(\lambda) \in T_{\vec c(\lambda)}\surface$ para toda $\lambda \in I$, llamado un campo vectorial sobre $\vec c$, entonces se define la \emph{derivada covariante} de $\vec v$: $\vec v_{;\lambda}$ es el campo vectorial sobre $\vec c$ que satisface
+	\begin{equation}
+		\vec v_{;\lambda} \coloneqq P_{\mathcal T} \dot{\vec v}(\lambda), \qquad \lambda \in I, \quad \mathcal T = T_{\vec c(\lambda)}\surface,
+	\end{equation}
+	donde $P_{\mathcal T} : \R^3 \to T_{\vec c(\lambda)}\surface $ es el operador de proyección ortogonal sobre $T_{\vec c(\lambda)}\surface$.
+\end{definition}
+
+\begin{remark}
+	De la definición de los símbolos de Christoffel,
+	\begin{equation}\label{eq: covariant}
+		\patch_{,\mu;\nu} = \ChrisSym{\alpha}{\mu\nu} \patch_{,\alpha}.
+	\end{equation}
+	Y se cumple la relación de simetría
+	\begin{equation}
+		\patch_{,\mu;\nu} = \patch_{,\nu;\mu}.
+	\end{equation}
+\end{remark}
+
+En este punto hemos adquirido todas las herramientas de geometría diferencial necesarias para nuestro enfoque de las geodésicas. Y aunque contemos con la expresión \eqref{eq: surfArc} para calcular la longitud de arco de una curva en una superficie, esto no es lo mismo que calcular la \emph{distancia} entre dos puntos de $\surface$.

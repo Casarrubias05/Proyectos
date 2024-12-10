@@ -1,0 +1,158 @@
+\section{Distancia en una Superficie}
+
+Durante la siguiente subsección nos olvidaremos de las superficies y curvas regulares que hemos estado formando, y nos enfocaremos brevemente en el concepto más general y abstracto de distancia en un conjunto igualmente general y abstracto.
+
+\begin{definition}[Espacio Métrico]
+	Sea $M$ un conjunto no vacío y $p, q, r \in M$. Un \emph{espacio métrico} (e. m.) es un par $(M, d)$ donde $d: M\times M \to \R$ es una función que satisface:
+	\begin{enumerate}[(i)]
+		\item Positividad: $d(p, q) \ge 0$;
+		\item Definitivdad: $d(p, q) = 0$ sii $p = q$;
+		\item Simetría: $d(p, q) = d(q, p)$;
+		\item Desigualdad del triángulo: $d(p, q) \le d(p, r) + d(r, q)$.
+	\end{enumerate}
+\end{definition}
+Por ejemplo, la distancia inducida por la norma $\norm{}$ como $d(\vec u, \vec v) = \norm{\vec u - \vec v}$ satisface las cuatro propiedades anteriores.
+
+De la extensa teoría de los espacios métricos, nosotros extraeremos los siguientes resultados de \parencite{clapp-2010}.
+
+\begin{definition}
+	Sea $(M, d)$ un e. m. y $p, q \in M$. Una \emph{trayectoria de} $p$ \emph{a} $q$ \emph{en} $M$ es una función continua $\gamma : [0, 1] \to M$ tal que $\gamma(0) = p$ y $\gamma(1) = q$.
+	
+	Su longitud se define como
+	\begin{equation}
+		\mathscr L(\gamma) \coloneqq \sup_{m \in \mathbb N}\left\{ \sum_{k=1}^m d(\gamma(\lambda_{k-1}), \gamma(\lambda_k)) \  \biggr\rvert \ 0 = \lambda_0 \le \lambda_1 \le \dotsb \le \lambda_m = 1\right\}.
+	\end{equation}
+\end{definition}
+
+Podemos notar que si $\mathscr L(\gamma) < \infty$, por la unicidad del supremo, se define una función\\ $C^0([0, 1]; M) \to \R$. De igual forma, si el conjunto en la definición no es acotado extendemos a la función longitud a $\mathscr L : C^0([a, b]; M) \to \R\cup\{\infty\}$. Notemos que estamos definiendo trayectorias sobre el intervalo $[0,1]$ no y sobre uno más general $[a,b]$. Esto porque la invariancia de la longitud de arco de una curva también se cumple para reparametrizaciones de una trayectoria
+
+Así como para las curvas regulares en $\R^n$, podemos definir qué es una trayectoria parametrizada por longitud de arco.
+\begin{definition}\label{def: paramArc}
+	Una trayectoria $\gamma \in C^0([0, 1], M)$ de longitud finita está parametrizada por longitud de arco si, para toda $\lambda \in [0, 1]$,
+	\begin{equation}
+		\mathscr L(\gamma; 0, \lambda) = \mathscr L(\gamma)\lambda.
+	\end{equation}
+\end{definition}
+
+Tomamos ahora como espacio al conjunto de trayectorias de la siguiente manera.
+\begin{definition}\label{def: tray}
+	El \emph{espacio (normado) de trayectorias} $(\mathcal T_{p, q}, d_\infty)$ se define como
+	\begin{equation}
+		\mathcal T_{p, q}(M) \coloneqq \{ \gamma \in C^0([0, 1]; M) \ \vert \  \gamma(0) = p, \gamma(1) = q\},
+	\end{equation}
+	con la distancia del supremo
+	\begin{equation}
+		d_\infty(\gamma, \tau) \coloneqq \max_{\lambda \in [0,1]} d(\gamma(\lambda), \tau(\lambda)),
+	\end{equation}
+	y la función longitud $\mathscr L : \mathcal T_{p, q}(M) \to \R \cup \{\infty\}$.
+\end{definition}
+
+\parencite{clapp-2010} muestra que la definición \ref{def: paramArc} no es fortuita, pues, como veremos más adelante, la existencia de trayectorias de longitud mínima requiere de la \emph{compacidad} de $M$; que $M$ sea compacto implica que toda sucesión de elementos $(p_k) \in M^{\mathbb N}$ posee una subsucesión que converge en $M$. Sin embargo, admitir múltiples parametrizaciones de una trayectoria impide la compacidad.
+Definimos entonces el conjunto $\hat{\mathcal T}_{p,q}(M)$.
+\begin{equation}
+	\hat{\mathcal T}_{p,q}(M) \coloneqq \{ \gamma \in \mathcal T_{p, q}(M) \ \vert \  \mathscr(\gamma) < \infty, \mathscr L(\gamma, 0; \lambda) = \mathscr L(\gamma)\lambda\}.
+\end{equation}
+Para curvas regulares en $\R^n$ es posible siempre, aunque no de manera explícita, encontrar una reparametrización por longitud de arco. Este resultado también aplica para trayectorias en espacios métricos arbitrarios.
+\begin{lemma}
+	Para cada $\gamma \in {\mathcal T}_{p,q}(M)$ de longitud finita existe $\hat \gamma \in \hat{\mathcal T}_{p,q}(M)$ tal que $\mathscr L(\gamma) = \mathscr L(\hat \gamma)$.
+\end{lemma}
+
+Antes de enunciar el resultado de \parencite{clapp-2010} crucial para este trabajo, hacemos la definición central a este escrito.
+
+\begin{definition}[Trayectoria Geodésica]
+	Sea $M$ un espacio métrico y $p, q \in M$. Una trayectoria geodésica $\hat{\gamma}$ es un elemento de $\mathcal T_{p, q}(M)$ que cumple $\mathscr L(\hat \gamma) \le \mathscr L( \gamma)$ para toda $\gamma \in \mathcal T_{p, q}(M)$.
+\end{definition}
+El siguiente teorema nos da entonces las condiciones necesarias y suficientes para encontrar una trayectoria geodésica.
+ 
+\begin{theorem}[Existencia de trayectorias geodésicas]
+	Sea $M$ espacio métrico compacto y $p, q \in M$. Si el conjunto $\mathcal T_{p, q}(M)$ es no vacío, entonces existe una trayectoria de longitud mínima en $\mathcal T_{p, q}(M)$.
+\end{theorem}
+
+Este teorema transforma entonces al problema inicial de encontrar una geodésica en una superficie $\surface$ de una cuestión geométrica a una cuestión de demostrar que $\surface$ es compacta. Nos enfocamos ahora nuevamente en las superficies regulares $\surface$ y sus propiedades.
+
+\subsection{La Distancia Intrínseca}
+El primer paso para demostrar que $\surface$ es compacta es recordar que un subconjunto de $\R^n$ es compacto sii es cerrado y acotado. Esta propiedad de $\surface$ está asegurada, como mostraremos, por el difeomorfismo $\patch$ en su definición.
+
+\begin{proposition}
+	Sean $M$ y $X$ espacios métricos y $\phi : M \to X$ una función. Son equivalentes
+	\begin{enumerate}[(i)]
+		\item La función $\phi$ es continua;
+		\item $\phi^{-1}(U)$ es abierto en $M$ para todo subconjunto abierto $U$ de $X$;
+		\item  $\phi^{-1}(C)$ es cerrado en $M$ para todo subconjunto cerrado $C$ de $X$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+	Si $\phi : M \to X$ es continua y $K$ es un subconjunto compacto de $M$, entonces $\phi(K)$ es un subconjunto compacto de $X$.
+\end{proposition}
+
+Podemos entonces enfocar la cuestión de demostrar que un subconjunto de $\surface$ es compacto a demostrar que un subconjunto cerrado de $U$ en la definición \ref{def: surface} es compacto. Es decir, para dos puntos $\vec p, \vec q \in \surface$, debemos demostrar que un subconjunto $K$ de $U$ que contenga a $\patch^{-1}(\vec p)$ y $\patch^{-1}(\vec q)$ es cerrado y acotado, pues al ser $\patch$ un difeomorfismo automáticamente es continua.
+
+La segunda condición para la existencia de una geodésica en $\surface$ que una a $\vec p$ y $\vec q$ es asegurar que $\mathcal T_{\vec p, \vec q}(\surface)$ es no vacío. Esto lo comenzamos a hacer a través de la siguiente definición.
+\begin{definition}[Arcoconexidad]
+	Un subconjunto $N$ de un espacio métrico $M$ es arcoconexo si para cualquier par de puntos $p, q \in N$ el conjunto $\mathcal T_{p, q}(N)$ es no vacío.
+\end{definition}
+
+\begin{definition}[Conexidad]
+	Un conjunto $D$ es desconexo si existen dos conjunto abiertos $A$ y $B$ disjuntos tales que $D \subset A \cup B$ pero $D \not\subset A$ y $D \not\subset B$. Se dice que $D$ es conexo si no es desconexo.
+\end{definition}
+
+La arcoconexidad de un conjunto asegura la conexidad del mismo; pero un conjunto conexo es arcoconexo solo si además es abierto.
+
+\begin{proposition}
+	Si $\phi : X \to Y$ es una transformación continua y $U$ es un subconjunto conexo de $X$, entonces $\phi(X)$ es conexo en $Y$.
+\end{proposition}
+
+Para una superficie regular y un difeomorfismo $\patch : U \to \surface$, la elección de un subconjunto $K \subset U$ está guiada por lo siguiente: si $K$ es abierto y conexo en $U$, entonces $\patch(K) \subset U$ es abierto y conexo en $\surface$ y por lo tanto será arcoconexo.
+Sin embargo, queda el detalle de que $K$ sea cerrado para asegurar la compacidad de $\patch(K)$. Esto se resuelve simplemente tomando su cerradura $\overline K$.
+
+\begin{proposition}
+	Sean $\surface$ una superficie regular, $\vec p, \vec q \in \surface$ y $\patch : U \to \surface$, con $U \subset \R^2$ abierto y conexo, un parche tal que $\patch(U)$ contenga a $\vec p$ y $\vec q$. Entonces en $\patch(\overline U)$ existe una geodésica entre $\vec p$ y $\vec q$.
+\end{proposition}
+
+Conocemos entonces las condiciones necesarias para hacer la siguient definición.
+\begin{definition}
+	Sea $\surface$ una superficie regular arcoconexa. La \emph{distancia intrínseca} $d: \surface \times \surface \to \R$ de $\surface$ se define como
+	\begin{equation}
+		d(\vec p, \vec q) \coloneqq \inf  \{\mathscr L(\vec c) \ \vert \ \vec c \in \mathcal T_{\vec p, \vec q}\surface, \vec c \in C^1([0, 1]; \surface) \}.
+	\end{equation}
+\end{definition}
+\begin{proposition}
+	La función distancia intrínseca de $\surface$ es una distancia.
+\end{proposition}
+\begin{proof}
+Mostraremos que $d$ satisface las cuatro propiedades de una distancia.
+	\begin{enumerate}[(i)]
+		\item Por definición $\mathscr L(\vec c) \ge 0$, por lo que $d(\vec p, \vec q) \ge 0$.
+		\item Si $\vec p = \vec q$, podemos definir una curva regular $\vec c$ en $\surface$ como $\vec c(\lambda) \coloneqq \vec p$ para toda $\lambda \in [0,1]$. Entonces
+		\begin{equation}
+			\mathscr L(\vec c) = \int_0^1 \norm{\dot{ \vec c}} \, d\lambda = \int_0^1 (0) \, d\lambda = 0.
+		\end{equation}
+		Si $d(\vec p, \vec q) = 0$, entonces para cualquier curva $\vec c$ regular en $\surface$ que una a $\vec p$ y $\vec q$
+		\begin{equation}
+			 \int_0^1 \norm{\dot{ \vec c}} \, d\lambda  = 0.
+		\end{equation}
+		Pero la función $\norm{\dot{\vec c}}$ es siempre no negativa, por lo que $\norm{\dot{\vec c}} = 0$ para toda $\lambda \in [0,1]$. Luego la función $\vec c$ es constante y $\vec p = \vec c(0) = \vec q$.
+		
+		\item Para una curva geodésica $\vec c \in \mathcal T_{\vec p, \vec q}(\surface)$ elegimos la reparametrización $\phi(\tilde \lambda) = 1 - \tilde \lambda, \tilde \lambda \in [0,1]$. Entonces $\tilde{\vec c}(0) = \vec c(\phi(0)) = \vec c(1) = \vec q$ y $\tilde{\vec c}(1) = \vec c(\phi(1)) = \vec c(0) = \vec p$ y $\tilde{\vec c} \in   \mathcal T_{\vec q, \vec p}(\surface)$. Por la invariancia de la longitud de arco
+		\begin{equation}
+			d(\vec q, \vec p) = \mathscr L(\tilde{\vec c}) = \mathscr L(\vec c) = d(\vec p, \vec q).
+		\end{equation}
+		
+		\item Sean $\vec c_1$ una geodésica que une a $\vec p$ y $\vec r$ y $\vec c_2$ una que une a $\r$ y $\vec q$. Entonces, eligiendo reparametrizaciones apropiadas de $\vec c_1, \vec c_2$ la curva
+		\begin{equation}
+			\vec c(\lambda) \coloneqq \begin{cases}
+				\vec c_1(\lambda), & 0 \le \lambda < 1/2,\\
+				\vec c_2(\lambda), & 1/2 \le \lambda \le 1,
+			\end{cases}
+		\end{equation}
+		une a $\vec p$ con $\vec q$.
+			Por definición, $d(\vec p, \vec q) \le \mathscr L(\vec c)$, y
+	\begin{equation}
+		\mathscr L(\vec c) = \mathscr L(\vec c_1) + \mathscr L(\vec c_2) = d(\vec p, \r) + d(\vec r, \vec q).
+	\end{equation}
+	Luego $d(\vec p, \vec q) \le d(\vec p, \r) + d(\vec r, \vec q)$.
+	\end{enumerate}
+	
+	Por lo tanto $(\surface, d)$ es espacio métrico.
+\end{proof}

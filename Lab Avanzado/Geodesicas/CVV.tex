@@ -1,0 +1,241 @@
+\section{Superficie de Trabajo}
+Para hablar de geodésicas en una superficie, antes hay que hablar de curvas en una superficie, y antes de eso hay que definir qué son una curva y una superficie en el espacio $\R^3$ euclidiano.
+
+\subsection{Curvas}
+
+\parencite{tapp-2016} hace la siguiente definición:
+\begin{definition}\label{def: curve}
+	Sea $I \subset \R$ un intervalo. Una \emph{curva parametrizada} en $\R^n$ es una función suave (posiblemente a trozos) $\vec c : I \to \R^n$.
+\end{definition}
+Por convención, a una curva parametrizada se le llama simplemente una \emph{curva}, y su forma explícita es
+\begin{equation}
+	\vec c(\lambda) = \bigl(c^1(\lambda), \dotsc , c^n(\lambda) \bigr), \qquad t \in I.
+\end{equation}
+Aquí la notación $c^\mu$, consistente con análisis tensorial, se refiere a la $\mu$-ésima componente de $\vec c$ y no a la $\mu$-ésima potencia de $c$.
+
+Notése que una curva en $\R^3$ se obtiene de la definición \ref{def: curve} simplemente con $n = 3$.
+
+Que una curva sea suave quiere decir que su derivada $\dot{ \vec c}$ en $\lambda \in I$, definida como
+\begin{equation}
+	\dot{\vec c}(\lambda) \coloneqq  \lim_{h \to 0} \frac{\vec c(\lambda + h) - \vec c(\lambda)}{h},
+\end{equation}
+está bien definida en todo $I$, y que la derivada de $\dot{\vec c}$ también existe, así como todas las derivadas sucesivas. A la primera derivada $\dot{\vec c}$ se le llama \emph{velocidad} de $\vec c$, y a la segunda derivada $\ddot{\vec c}$ se le conoce como \emph{aceleración} de $\vec c$. Dada su forma explícita, si $\vec c$ es suave, entonces sus funciones componentes $c^\mu, \mu = \overline{1, n}$ también son suaves y
+\begin{equation}
+	\dot{\vec c}(\lambda) = \bigl(\dot c^1(\lambda), \dotsc , \dot c^n(\lambda) \bigr).
+\end{equation}
+
+Establecemos ahora la rapidez de $\vec c$: la rapidez de $\vec c$ en $t \in I$ es la función $s : I \to \R^+$ definida como 
+\begin{equation}
+	s(\lambda) \coloneqq \norm{\dot{\vec c}(\lambda)},
+\end{equation}
+donde $\norm{}$ es la norma estándar euclidiana $\lnorm{}{}$. 
+De principal importancia son las curvas ``que no se detienen'' y las curvas de velocidad unitaria.
+\begin{definition}
+	Sea $\vec c$ una curva en $\R^n$ y $\lambda \in I$ arbitraria.
+	\begin{enumerate}[(i)]
+		\item $\vec c$ es \emph{regular} si satisface $s(\lambda) \neq 0$.
+	
+		\item $\vec c$ está \emph{normalizada} o \emph{parametrizada por longitud de arco} si $s(\lambda) = 1$.
+	\end{enumerate}
+\end{definition}
+Estamos ahora en posición de hacer la definción central a este trabajo.
+\begin{definition}\label{def: arcL}
+	La longitud de arco de $\vec c$ entre $a, b \in I$ está definida como
+	\begin{equation}
+		\mathscr L(\vec c; a, b) \coloneqq \int_{a}^{b} \norm{\dot{\vec c}(\lambda)} \, d\lambda
+		= \int_{a}^{b} s(\lambda) \, d\lambda.
+	\end{equation}
+\end{definition}
+	Notemos que si fijamos $a \in I$ y definimos
+	\begin{equation}
+		L(\lambda) \coloneqq \mathscr L(\vec c; a, \lambda) = \int_{a}^{\lambda}s(\mu) \, d\mu,
+	\end{equation}
+por el primer teorema fundamental del cálculo obtenemos una función diferenciable, pues \\ $\dot L(\lambda)~=~s(\lambda)$. Otra observación es que si $\vec c$ es una curva con velocidad $s$ constante, entonces $\mathscr L(\vec c; a, b) = (b - a)s$. Concretamente, si $\vec c$ está normalizada, $\mathscr L(\vec c; a, b) = b - a$.
+
+Por brevedad, cuando del contexto sea claro sobre qué intervalo se está calculando la longitud de arco de $\vec c$, denotaremos a esta simplemente por $\mathscr L(\vec c)$.
+
+Una propiedad importante de la longitud de arco es que es independiente de cómo esté parametrizada la curva.
+\begin{definition}
+	Sea $\vec c : I \to \R^n$ regular. Una reparametrización de $\vec c$ es una función $\tilde{\vec c} : \tilde{I} \subset \R \to \R^n$ definida como $\tilde{\vec c} \coloneqq \vec c \circ \phi$, donde $\phi : \tilde{I} \to I$ es una biyección suave cuya derivada no se anula en ningún punto de $\tilde{I}$.
+\end{definition}
+En la definción anterior, que $\dot \phi$ no se anule en $\tilde I$ nos asegura que $\tilde{\vec c}$ también es una curva regular y que $\phi$ es monótona en $\tilde I$; es decir, para $\tilde\lambda \in \tilde I$ arbitraria se cumple que $\dot \phi(\tilde\lambda) > 0$ o $\phi(\tilde\lambda) < 0$.
+
+Ahora enunciaremos y demostraremos, por razones estéticas, la invariancia de $\mathscr L(\vec c)$ bajo reparametrizaciones.
+\begin{proposition}[Invariancia de la longitud de arco]
+	Sea $\tilde{\vec c} = \vec c \circ \phi$ una reparametrización de $\vec c$. Entonces
+	\begin{equation}
+		\mathscr L (\tilde{\vec c}) = \mathscr L (\vec c).
+	\end{equation}
+\end{proposition}
+\begin{proof}
+	Sea $\phi : [\tilde a, \tilde b] \to [a, b]$ y consideremos primero el caso $\phi(\tilde a) = a$, $\phi(\tilde b) = b$ y $\phi$ estrictamente creciente. Entonces
+	\begin{equation}
+		\begin{split}
+		\mathscr L(\tilde {\vec c}) &= \int_{\tilde a}^{\tilde b}\norm[\big]{\dot{\tilde{\vec c}}(\tilde \lambda)} \, d\tilde{\lambda}
+		= \int_{\tilde a}^{\tilde b}\norm*{\frac{d}{d\tilde \lambda}{\vec c}\bigl( \phi(\tilde \lambda)\bigr)} \, d\tilde{\lambda}\\
+		&= \int_{\tilde a}^{\tilde b}\norm[\big]{\dot \phi(\tilde \lambda)\dot{{\vec c}}\bigl( \phi(\tilde \lambda)\bigr)} \, d\tilde{\lambda}
+		= \int_{\tilde a}^{\tilde b} \abs{\dot \phi(\tilde \lambda)}\norm[\big]{\dot{{\vec c}}\bigl( \phi(\tilde \lambda)\bigr)} \, d\tilde{\lambda}\\
+		&= \int_{\tilde a}^{\tilde b}  \norm[\big]{\dot{{\vec c}}\bigl( \phi(\tilde \lambda)\bigr)} \dot \phi(\tilde \lambda)\, d\tilde{\lambda}
+		= \int_{\phi(\tilde a)}^{\phi(\tilde b)}  \norm[\big]{\dot{{\vec c}} ( \lambda )}\, d\lambda\\
+		&= \int_{a}^{b} \norm[\big]{\dot{{\vec c}} ( \lambda )}\, d\lambda
+		= \mathscr L(\vec c).
+		\end{split}
+	\end{equation}
+	Si en cambio $\phi(\tilde a) = b$, $\phi(\tilde b) = a$ y $\phi$ es estrictamente decreciente,
+	\begin{equation}
+		\begin{split}
+		\mathscr L(\tilde {\vec c}) &= \int_{\tilde a}^{\tilde b} \abs{\dot \phi(\tilde \lambda)}\norm[\big]{\dot{{\vec c}}\bigl( \phi(\tilde \lambda)\bigr)} \, d\tilde{\lambda}
+		= -\int_{\tilde a}^{\tilde b}  \norm[\big]{\dot{{\vec c}}\bigl( \phi(\tilde \lambda)\bigr)} \dot \phi(\tilde \lambda)\, d\tilde{\lambda}\\
+		&= -\int_{\phi(\tilde a)}^{\phi(\tilde b)}  \norm[\big]{\dot{{\vec c}} ( \lambda )}\, d\lambda
+		= -\int_{b}^{a} \norm[\big]{\dot{{\vec c}} ( \lambda )}\, d\lambda\\
+		&= \int_{a}^{b} \norm[\big]{\dot{{\vec c}} ( \lambda )}\, d\lambda
+		= \mathscr L(\vec c).
+		\end{split}
+	\end{equation}
+\end{proof}
+
+Los conceptos hasta ahora mencionados son aplicables para una clase muy general de curvas; pero para hablar de curvas ``pegadas'' a una superficie, necesitamos hallar las condiciones bajo las cuales estas curvas son regulares. Y más importantemente, necesitamos definir qué es una superficie. Esta última condición la relegaremos por el momento, recordando las herramientas útiles del análisis multivariable e introduciendo notación adicional.
+
+\subsection{Conceptos Centrales de Cálculo Multivariable}
+Para estudiar curvas en $\R^n$ la extensión del cálculo de una variable a cálculo vectorial fue, cuando menos sencilla, intuitiva; pero para tratar con superficies en $\R^n$ es necesario presentar varios conceptos claves de las funciones vectoriales $\vec f : U \subset \R^m \to \R^n$, donde $U$ es un subconjunto abierto de $\R^m$.
+
+\begin{definition}
+	La derivada parcial de $\vec f$ respecto a la variable $x^\mu, \mu = \overline{1, m},$ en $\vec p \in U$ se define como
+	\begin{equation}
+		\partialD{ \vec f}{x^\mu}(\vec p) \coloneqq \lim_{h \to 0} \frac{\vec f(\vec p + h\univ{\mu}) - \vec f(\vec p)}{h},
+	\end{equation}
+	donde $\univ{\mu}$ es el $\mu$-ésimo vector base de la base canónica de $\R^m$.
+\end{definition}
+Otras notaciones para la derivada parcial de $\vec f$ son
+\begin{equation}
+	\vec f_{x^\mu}, \qquad \partial_\mu \vec f, \qquad \vec f,_{\mu}.
+\end{equation}
+
+Las derivadas parciales, como su nombre lo indica, no son ``completas'' ni generalizan el concepto de \emph{diferenciabilidad} a funciones con entradas y valores vectoriales. En su lugar, empleamos la siguiente definición.
+\begin{definition}
+	Sea $\vec f : U \subset \R^m \to \R^n$ y $\vec p \in U$. Se dice que $\vec f$ es diferenciable en $\vec p$ si existe una transformación lineal única $D\vec f(\vec p) : \R^m \to \R^n$ tal que
+	\begin{equation}
+		\lim_{\vec h \to \vec 0}\frac{\norm{\vec f(\vec p + \vec h) - \vec f(\vec p) - D\vec f(\vec p)\vec h}}{\norm{\vec h}} = 0.
+	\end{equation}
+\end{definition}
+
+Del álgebra lineal, a la transformación lineal $D\vec f(\vec p)$ se le puede asociar una matriz (respecto a las bases canónica de $\R^m$ y $\R^n$), la cual está dada por el siguiente resultado.
+\begin{proposition}[La matriz jacobiana]\label{prop: jacobian}
+	Si $\vec f: \R^m \to \R^n$ es diferenciable en $\vec p$, entonces sus derivadas parciales $\vec f_{,\mu}$ están bien definidas en $\vec p$ y
+	\begin{equation}
+		\mathcal M(D\vec f(\vec p)) = \Matrix{
+			f\indices{^1_{,1}}(\vec p) & \dotsb & f\indices{^1_{,m}}(\vec p)\\
+			\vdots & & \vdots\\
+			f\indices{^n_{,1}}(\vec p) & \dotsb & f\indices{^n_{,m}}(\vec p)
+		}.
+	\end{equation}
+	La notación se suele abreviar denotando simplemente a $\mathcal M(D\vec f(\vec p))$  como $D\vec f(\vec p) $.
+\end{proposition}
+En la proposición anterior se ilustra el beneficio de la notación empleada.
+Notése la separación horizontal que hay entre los subíndices y los superíndices.
+\begin{remark}
+	Para el caso $m = 1$, la representación matricial de $D\vec f(\vec p)$ se reduce a
+	\begin{equation}
+		D\vec f(\lambda) = \Matrix{\dot f^1(\lambda) \\ \vdots \\ \dot f^n(\lambda)}.
+	\end{equation}
+\end{remark}
+
+En cálculo multivaribale, así como en cálculo de una sola variable, se pueden componer funciones y esas funciones compuestas pueden diferenciarse si cada una es diferenciable por separado. Más precisamente, tenemos el siguiente teorema.
+\begin{theorem}[Regla de la Cadena]\label{teo: chain}
+	Sean $\vec f : V \subset \R^m \to \R^n$ y $\vec g : U \subset \R^l \to \R^m$ tal que $\vec g$ es diferenciable en $\vec p$ y $\vec f$ es diferenciable en $\vec g(\vec p)$. Entonces $\vec f \circ \vec g$ es diferenciable en $\vec p$ y
+	\begin{equation}
+		D(\vec f \circ \vec g)(\vec p) = D\vec f(\vec g(\vec p)) D\vec g(\vec p).
+	\end{equation}
+\end{theorem}
+
+Así como una curva puede derivarse múltiples veces, las funciones vectoriales pueden derivarse parcialmente varias veces y respecto a diferentes variables: por ejemplo, la derivada parcial de $\vec f_{,\mu}$ respecto a $x^\nu$ es
+\begin{equation}
+	\vec f_{,\mu,\nu} \coloneqq \frac{\partial^2 \vec f}{\partial x^\nu \partial x^\mu}.
+\end{equation}
+Al conjunto de funciones $\vec f : U \subset \R^m \to \R^n$ cuyas $r$-ésimas derivadas parciales existen y son continuas en $U$ se denota por $C^r(U; \R^n)$. El conjunto $C^\infty(U; \R^n)$ es el conjunto de todas las funciones cuyas derivadas parciales de todos los órdenes existen y son continuas, y si $\vec f \in C^\infty(U; \R^n)$ decimos que $\vec f$ es suave en $U$.
+
+Un resultado importante del análisis es que si una función $\vec f$ pertenece a $C^2(U; \R^n)$, entonces sus derivadas parciales conmutan:
+\begin{equation}
+	\vec f_{,\mu, \nu} = \vec f_{,\nu,\mu}.
+\end{equation}
+
+El siguiente resultado nos asegurará la suavidad de curvas en superficies.
+\begin{proposition}\label{prop: compSmooth}
+	Sean $V \subset \R^m$, $f \in C^\infty(V; \R^n)$ y $U \subset \R^l$, $\vec g \in C^\infty(U; \R^m)$ tal que $\vec g(U) \subset V$, entonces la función compuesta $\vec f \circ \vec g : U \to \R^n$ pertenece a $C^\infty(U; \R^n)$.
+\end{proposition}
+Mientras que la siguiente definición nos indicará como calcular la velocidad de la curva en la superficie.
+\begin{definition}\label{def: directional}
+	Sea $\vec f: U \subset \R^m \to \R^n$, $\vec p \in U$ y $\vec v \in \R^m$. La derivada direccional de $\vec f$ en $\vec p$ en la dirección $\vec v$ es
+	\begin{equation}
+		D_{\vec v} \vec f(\vec p) \coloneqq \lim_{h \to 0} \frac{\vec f(\vec p + h\vec v) - \vec f(\vec p)}{h} = \frac{d}{d\lambda}(\vec f \circ \vec c)(0),
+	\end{equation}
+	donde $\vec c(\lambda) = \vec p + \lambda \vec v$
+\end{definition}
+
+\begin{proposition}
+	En la definción anterior, si $\vec f$ es diferenciable en $\vec p$, entonces
+	\begin{equation}
+		D_{\vec v} \vec f(\vec p) = D\vec f(\vec p)\vec v.
+	\end{equation}
+\end{proposition}
+
+\begin{proposition}
+	Podemos extender la definición \ref{def: directional} a curvas diferenciables. Sea $\vec f$ como en la definición \ref{def: directional} y $\vec c : I \to U$ una curva diferenciable en $\lambda \in I$ tal que $\vec c(\lambda) = \vec p$ y $\dot{\vec c}(\lambda) = \vec v$ . Entonces
+	\begin{equation}
+		D_{\vec v} \vec f(\vec p) = \frac{d}{d\lambda}(\vec f \circ \vec c)(\lambda).
+	\end{equation}
+	Si $\vec f$ es diferenciable en $\vec p$, entonces
+	\begin{equation}
+		D_{\vec v} \vec f(\vec p) = D\vec f(\vec c(\lambda))\dot{\vec c}(\lambda).
+	\end{equation}
+\end{proposition}
+
+\begin{remark}
+	Para emplear la proposición \ref{prop: jacobian}, hacemos la siguiente observación
+	\begin{equation}
+		\vec f_{,_\mu}(\vec p) = \Matrix{
+			f\indices{^1_{,\mu}}(\vec p) \\
+			\vdots \\
+			f\indices{^n_{,\mu}}(\vec p).
+		}.
+	\end{equation}
+	Entonces,
+	\begin{equation}
+		\frac{d}{d\lambda}(\vec f \circ \vec c)(\lambda) = \sum_{\mu=1}^m \dot c^\mu(\lambda)\vec f_{,_\mu}(\vec c(\lambda)).
+	\end{equation}
+	Empleando el convenio de la suma de Einstein, donde índices repetidos \emph{una sola vez} arriba y abajo indican una suma sobre el rango entendido por el contexto, podemos escribir (omitiendo el parámetro $\lambda$)
+	\begin{equation}
+		\frac{d}{d\lambda}(\vec f \circ \vec c) = \dot c^\mu \vec f_{,_\mu}(\vec c).
+	\end{equation}
+\end{remark}
+
+Finalmente, enunciamos un teorema crítico para la geometría diferencial.
+\begin{theorem}[Teorema de la Función Inversa]
+	Sean $U\subset \R^n$ abierto, $\vec f \in C^1(U; \R^n)$ y $\vec p \in U$ tal que $D\vec f(\vec p)$ es invertible. Entonces existe una vecindad $V \subset U$ de $\vec p$ tal que $\vec f$ tiene una función inversa diferenciable. De forma más precisa, existen vecindades $V$ de $\vec p$ y $W$ de $\vec f(\vec p)$, y una función $C^1(W; V)$ tal que
+	\begin{equation}
+		\vec f(\vec g(\vec q)) = \vec q \quad \forall \vec q \in W, \qquad \vec g(\vec f(\vec r)) = \vec r \quad \forall \vec r \in V.
+	\end{equation}
+	Además,
+	\begin{equation}
+		D\vec g(\vec f(\r)) = \bigl[D\vec f(\r) \bigr]^{-1}.
+	\end{equation}
+\end{theorem}
+\begin{proposition}
+	Si $\vec f$ es suave, entonces su función inversa garantizada por el teorema anterior también es suave.
+\end{proposition}
+
+Para los casos donde $\vec f$ esté definida sobre un conjunto $U$ no abiertos, hacemos las siguiente definición.
+\begin{definition}
+	Sea $X \subset \R^m$ un conjunto no necesariamente abierto. Se dice que $\vec f: X \to \R^n$  es suave si para toda $\vec p \in X$ existe una vecindad $U \subset \R^m$ suya y una función $\tilde{\vec f} \in C^\infty(U; \R^n)$ tal que $\tilde{\vec f}\rvert_{X\cap U} = {\vec f}$.
+\end{definition}
+
+Para poder pasar a la geometría diferencial que nos interesa, hacemos las últimas definiciones fundamentales.
+\begin{definition}
+	Sea $U \subset \R^n$. Un conjunto $V \subset U$ se dice que es \emph{abierto en} $U$ si $V$ es la intersección de $U$ con un subconjunto abierto de $\R^n$.
+	
+	Si $\vec p \in U$, \emph{una vecindad de} $\vec p$ \emph{en} $U$ es un subconjunto de $U$ que es abierto en $U$ y que contiene a $\vec p$.
+\end{definition}
+
+\begin{definition}
+	Dos subconjunto $X \subset \R^m$ y $Y\subset \R^n$ son \emph{difeomórficos} si existe una función invertible suave $\vec f: X \to Y$ tal que su inversa también sea suave.  A tal función se le conoce como un \emph{difeomorfismo}.
+\end{definition}

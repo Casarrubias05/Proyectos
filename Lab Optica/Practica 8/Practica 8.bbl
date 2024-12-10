@@ -1,0 +1,583 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{single_slit}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Diffraction pattern single slit}
+      \verb{urlraw}
+      \verb https://ar.inspiredpencil.com/pictures-2023/diffraction-pattern-single-slit
+      \endverb
+      \verb{url}
+      \verb https://ar.inspiredpencil.com/pictures-2023/diffraction-pattern-single-slit
+      \endverb
+    \endentry
+    \entry{fowles-1989}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8ba35c368771ff25dbfecd7efca3bf0e}{%
+           family={Fowles},
+           familyi={F\bibinitperiod},
+           given={Grant\bibnamedelimb R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{fullhash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{bibnamehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{authorbibnamehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{authornamehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{authorfullhash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{1}
+      \field{title}{Introduction to Modern Optics}
+      \field{year}{1989}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Grimaldi}{online}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Francesco María Grimaldi}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://academia-lab.com/enciclopedia/francesco-maria-grimaldi/
+      \endverb
+      \verb{url}
+      \verb https://academia-lab.com/enciclopedia/francesco-maria-grimaldi/
+      \endverb
+    \endentry
+    \entry{hecht-1999}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9a6efa2d012e3aaa08e4b6a8cf6a8b4c}{%
+           family={Hecht},
+           familyi={H\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ADDISON WESLEY}%
+      }
+      \strng{namehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{fullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{bibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorbibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authornamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorfullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{edition}{3}
+      \field{month}{1}
+      \field{title}{Óptica}
+      \field{year}{1999}
+      \field{dateera}{ce}
+    \endentry
+    \entry{blurry_shadow}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=33591cfa7fcbd5623e107fc5b949967d}{%
+           family={Hemsley},
+           familyi={H\bibinitperiod},
+           given={Alexandrina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{fullhash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{bibnamehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{authorbibnamehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{authornamehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{authorfullhash}{33591cfa7fcbd5623e107fc5b949967d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{7}
+      \field{title}{Towards The Sun}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://uk.pinterest.com/pin/i-quite-like-this-for-the-blurry-shadow-i-dont-think-i-want-the-texture-to-be-quite-as-grainy-though-i-think-essentially-i--296111744223100531/
+      \endverb
+      \verb{url}
+      \verb https://uk.pinterest.com/pin/i-quite-like-this-for-the-blurry-shadow-i-dont-think-i-want-the-texture-to-be-quite-as-grainy-though-i-think-essentially-i--296111744223100531/
+      \endverb
+    \endentry
+    \entry{pedrotti}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3be4ff5736ba25426151cb98ccade72}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0,
+           prefix={L.},
+           prefixi={L\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=7dadcf78604c09cde6200ed114b44f92}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           prefix={M.},
+           prefixi={M\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=464252ee04186f10fa523b249bfa606d}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           prefix={S.},
+           prefixi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{fullhash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{bibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authorbibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authornamehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{authorfullhash}{3939ebe7044db99b8c906f36251096b9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Introduction to Optics}
+    \endentry
+    \entry{openstax}{online}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=958fd1d1699cbc3a1e96692dbf30b72e}{%
+           given={OpenStax},
+           giveni={O\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{fullhash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{bibnamehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{authorbibnamehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{authornamehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{authorfullhash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{27.3 Young’s double slit experiment}
+      \verb{urlraw}
+      \verb https://pressbooks.online.ucf.edu/phy2053bc/chapter/youngs-double-slit-experiment/
+      \endverb
+      \verb{url}
+      \verb https://pressbooks.online.ucf.edu/phy2053bc/chapter/youngs-double-slit-experiment/
+      \endverb
+    \endentry
+    \entry{stuewer-1970}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7ebdeb45b01f6f08a49f08be32d19b3}{%
+           family={Stuewer},
+           familyi={S\bibinitperiod},
+           given={Roger\bibnamedelimb H.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{fullhash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{bibnamehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{authorbibnamehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{authornamehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{authorfullhash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{www.jstor.org}
+      \field{number}{2}
+      \field{title}{A Critical Analysis of Newton’s Work on Diffraction}
+      \field{volume}{61}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/229974
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/229974
+      \endverb
+    \endentry
+    \entry{young-1804}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=303e5b1e86249ca165ef0f41a60f2671}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{fullhash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{bibnamehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{authorbibnamehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{authornamehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{authorfullhash}{303e5b1e86249ca165ef0f41a60f2671}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{31}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society of London}
+      \field{month}{12}
+      \field{title}{I. The Bakerian Lecture. Experiments and calculations relative to physical optics}
+      \field{volume}{94}
+      \field{year}{1804}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1098/rstl.1804.0001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1098/rstl.1804.0001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1098/rstl.1804.0001
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{single_slit}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Diffraction pattern single slit}
+      \verb{urlraw}
+      \verb https://ar.inspiredpencil.com/pictures-2023/diffraction-pattern-single-slit
+      \endverb
+      \verb{url}
+      \verb https://ar.inspiredpencil.com/pictures-2023/diffraction-pattern-single-slit
+      \endverb
+    \endentry
+    \entry{fowles-1989}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8ba35c368771ff25dbfecd7efca3bf0e}{%
+           family={Fowles},
+           familyi={F\bibinitperiod},
+           given={Grant\bibnamedelimb R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{fullhash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{bibnamehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{authorbibnamehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{authornamehash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \strng{authorfullhash}{8ba35c368771ff25dbfecd7efca3bf0e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{month}{1}
+      \field{title}{Introduction to Modern Optics}
+      \field{year}{1989}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Grimaldi}{online}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{title}{Francesco María Grimaldi}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://academia-lab.com/enciclopedia/francesco-maria-grimaldi/
+      \endverb
+      \verb{url}
+      \verb https://academia-lab.com/enciclopedia/francesco-maria-grimaldi/
+      \endverb
+    \endentry
+    \entry{hecht-1999}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9a6efa2d012e3aaa08e4b6a8cf6a8b4c}{%
+           family={Hecht},
+           familyi={H\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ADDISON WESLEY}%
+      }
+      \strng{namehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{fullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{bibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorbibnamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authornamehash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \strng{authorfullhash}{9a6efa2d012e3aaa08e4b6a8cf6a8b4c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{edition}{3}
+      \field{month}{1}
+      \field{title}{Óptica}
+      \field{year}{1999}
+      \field{dateera}{ce}
+    \endentry
+    \entry{blurry_shadow}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=33591cfa7fcbd5623e107fc5b949967d}{%
+           family={Hemsley},
+           familyi={H\bibinitperiod},
+           given={Alexandrina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{fullhash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{bibnamehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{authorbibnamehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{authornamehash}{33591cfa7fcbd5623e107fc5b949967d}
+      \strng{authorfullhash}{33591cfa7fcbd5623e107fc5b949967d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{7}
+      \field{title}{Towards The Sun}
+      \field{urlday}{1}
+      \field{urlmonth}{12}
+      \field{urlyear}{2024}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://uk.pinterest.com/pin/i-quite-like-this-for-the-blurry-shadow-i-dont-think-i-want-the-texture-to-be-quite-as-grainy-though-i-think-essentially-i--296111744223100531/
+      \endverb
+      \verb{url}
+      \verb https://uk.pinterest.com/pin/i-quite-like-this-for-the-blurry-shadow-i-dont-think-i-want-the-texture-to-be-quite-as-grainy-though-i-think-essentially-i--296111744223100531/
+      \endverb
+    \endentry
+    \entry{pedrotti}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c3be4ff5736ba25426151cb98ccade72}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0,
+           prefix={L.},
+           prefixi={L\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=7dadcf78604c09cde6200ed114b44f92}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           prefix={M.},
+           prefixi={M\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=464252ee04186f10fa523b249bfa606d}{%
+           family={Pedrotti},
+           familyi={P\bibinitperiod},
+           given={Leno},
+           giveni={L\bibinitperiod},
+           givenun=0,
+           prefix={S.},
+           prefixi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{fullhash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{bibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authorbibnamehash}{3939ebe7044db99b8c906f36251096b9}
+      \strng{authornamehash}{f610dc6c8b6403cc6f99114488802ca5}
+      \strng{authorfullhash}{3939ebe7044db99b8c906f36251096b9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Introduction to Optics}
+    \endentry
+    \entry{openstax}{online}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=958fd1d1699cbc3a1e96692dbf30b72e}{%
+           given={OpenStax},
+           giveni={O\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{fullhash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{bibnamehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{authorbibnamehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{authornamehash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \strng{authorfullhash}{958fd1d1699cbc3a1e96692dbf30b72e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{27.3 Young’s double slit experiment}
+      \verb{urlraw}
+      \verb https://pressbooks.online.ucf.edu/phy2053bc/chapter/youngs-double-slit-experiment/
+      \endverb
+      \verb{url}
+      \verb https://pressbooks.online.ucf.edu/phy2053bc/chapter/youngs-double-slit-experiment/
+      \endverb
+    \endentry
+    \entry{stuewer-1970}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7ebdeb45b01f6f08a49f08be32d19b3}{%
+           family={Stuewer},
+           familyi={S\bibinitperiod},
+           given={Roger\bibnamedelimb H.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{fullhash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{bibnamehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{authorbibnamehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{authornamehash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \strng{authorfullhash}{f7ebdeb45b01f6f08a49f08be32d19b3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{www.jstor.org}
+      \field{number}{2}
+      \field{title}{A Critical Analysis of Newton’s Work on Diffraction}
+      \field{volume}{61}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/229974
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/229974
+      \endverb
+    \endentry
+    \entry{young-1804}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=303e5b1e86249ca165ef0f41a60f2671}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{fullhash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{bibnamehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{authorbibnamehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{authornamehash}{303e5b1e86249ca165ef0f41a60f2671}
+      \strng{authorfullhash}{303e5b1e86249ca165ef0f41a60f2671}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{31}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society of London}
+      \field{month}{12}
+      \field{title}{I. The Bakerian Lecture. Experiments and calculations relative to physical optics}
+      \field{volume}{94}
+      \field{year}{1804}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 16}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1098/rstl.1804.0001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1098/rstl.1804.0001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1098/rstl.1804.0001
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

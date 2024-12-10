@@ -1,0 +1,20 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Practica 8.blg'
+[59] biber-darwin:340> INFO - === Sun Dec  1, 2024, 21:10:53
+[74] Biber.pm:419> INFO - Reading 'Practica 8.bcf'
+[176] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[197] Biber.pm:4419> INFO - Processing section 0
+[203] Biber.pm:4610> INFO - Looking for bibtex file 'Bibliografia.bib' for section 0
+[205] bibtex.pm:1713> INFO - LaTeX decoding ...
+[213] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografia.bib'
+[275] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[275] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[275] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[288] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[288] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[291] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'es-ES'
+[297] bbl.pm:660> INFO - Writing 'Practica 8.bbl' with encoding 'UTF-8'
+[300] bbl.pm:763> INFO - Output to Practica 8.bbl
+[300] Biber.pm:131> WARN - Possible typo (case mismatch) between citation and datasource keys: 'Young-1804' and 'young-1804' in file 'Bibliografia.bib'
+[300] Biber.pm:131> WARN - I didn't find a database entry for 'Young-1804' (section 0)
+[300] Biber.pm:133> INFO - WARNINGS: 2

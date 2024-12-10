@@ -1,0 +1,161 @@
+\section{La Ecuación de la Geodésica}
+Presentamos ahora el método para encontrar las curvas geodésicas tal cómo han sido planteadas.
+
+En las secciones anteriores hemos colocado sigilosamente algunos elementos: definimos en \ref{def: arcL} la longitud de arco como una función que asocia a cada curva $\vec c$ regular un número no negativo. En la definición \ref{def: tray} equipamos al espacio $\mathcal T_{p, q}(M)$ una distancia.
+
+Esto son los elementos necesarios para introducir el \emph{cálculo de variaciones}, donde el funcional que buscamos minimizar es la longitud de arco $\mathscr L (\vec c)$ de una curva regular en una superficie $\surface$.
+
+El resultado central al cálculo variacional son las \emph{ecuaciones de Euler-Lagrange}, que determinan, como en cálculo de una variable, en qué funciones un funcional tiene un extremo, mas no aseguran que tal extremo sea un mínimo.
+
+\begin{theorem}[Ecuaciones de Euler-Lagrange]
+	Consideremos un espacio métrico $(M, d)$ y un funcional $S : U \to \R$ definido en un subconjunto abierto $X$ de $M$.
+	Sea $\mathcal L : (\lambda, y^\alpha, z^\alpha), \alpha = \overline{1, n}$ una función de clase $C^2$. Una condición necesaria para que la curva $\vec c \in C^\infty([a, b]; \R^n)$ dé un valor extremo del funcional $S$, donde
+	\begin{equation}\label{eq: action}
+		S(\vec c) \coloneqq \int_{a}^b \mathcal L(\lambda, \vec c, \dot{\vec c}) \, d\lambda,
+	\end{equation}
+	es que las funciones $c^\mu, \dot c^\mu, \mu = \overline{1, n}$, satisfagan la ecuación de Euler-Lagrange
+	\begin{equation}
+		\frac{d}{d\lambda}\frac{\partial \mathcal L}{\partial \dot c^\mu} - \frac{\partial \mathcal L}{\partial c^\mu} = 0.
+	\end{equation}
+	A la función $\mathcal L$ se le llama \emph{lagrangiano} \parencite{gelfand-1975}.
+\end{theorem}
+
+La primera elección sería elegir en \eqref{eq: action} al lagrangiano como
+\begin{equation}
+	\mathcal L(\lambda, \bgamma, \dot{\bgamma}) = \norm{\dot{\bgamma}} = \sqrt{g_{\mu\nu} \dot c^\mu \dot c^\nu},
+\end{equation}
+donde $\bgamma(a) = \vec p$ y $\bgamma(b) = \vec q$.
+Sin embargo, la raíz cuadrada anterior introduce complicaciones innecesarias en el cálculo de las ecuaciones de Euler-Lagrange. Resulta entonces más conveniente definir el funcional de energía $E: {\mathcal T}_{\vec p, \vec q}(\surface) \to \R$ como \parencite{carmo-1974}
+\begin{equation}
+	E(\bgamma) \coloneqq \frac{1}{2}\int_a^b \norm{\dot{\bgamma}}^2 \, d\lambda.
+\end{equation}
+Mostramos que las curvas $\vec c$ que extremizan a $\mathscr L$ también extremizan a $E$.
+De la desigualdad de Cauchy-Bunyakovsky-Schwarz para integrales
+\begin{equation}
+	\bigl( \mathscr L(\bgamma)\bigr)^2 \le \int_{a}^{b} \bigl(\sqrt{
+			g_{\mu\nu} \dot c^\mu \dot c^\nu
+		}\bigr)^2\, d\lambda \int_a^b d\lambda
+		= 2(b-a)E(\bgamma),
+\end{equation}
+donde la igualdad se cumple si $\norm{\dot{\bgamma}}$ es constante. Si el intervalo de intgración es $[0,1]$, entonces $\bgamma$ está normalizada y $\bigl( \mathscr L(\bgamma)\bigr)^2 = 2E(\bgamma)$.
+
+\begin{lemma}
+	Sean $\vec p,\vec q \in \surface$ y $ \hat\bgamma \in \mathcal T_{\vec p, \vec q}(\surface)$ una curva regular geodésica de rapidez constante. Entonces para todas las curvas $\bgamma \in \mathcal T_{\vec p, \vec q}(\surface)$ se cumple
+	\begin{equation}
+		E(\hat\bgamma) \le E(\bgamma).
+	\end{equation}
+\end{lemma}
+\begin{proof}
+	De la desigualdad entre $\mathscr L(\bgamma)$ y $E(\bgamma)$,
+	\begin{equation}
+		2(b-a)E(\hat\bgamma) = \bigl( \mathscr L(\hat\bgamma)\bigr)^2 \le \bigl( \mathscr L(\bgamma)\bigr)^2 \le 2(b-a)E(\bgamma).
+	\end{equation}
+\end{proof}
+
+Tomemos entonces una curva regular $\bgamma$ en $\surface$ como en la ecuación \eqref{eq: gcurve}, donde $I = [0,1]$.
+\begin{equation}
+	E(\bgamma) \coloneqq \frac{1}{2}\int_0^1 \norm{\dot{\bgamma}}^2 \, d\lambda.
+\end{equation}
+
+\subsection{Ecuaciones de Euler-Lagrange y de la Geodésica}
+El lagrangiano que estaremos empleando es, de forma totalmente explícita
+\begin{equation}\label{eq: lagrangian}
+	\mathcal L = \frac12g_{\mu\nu}(\vec c(\lambda)) \dot c^\mu(\lambda) \dot c^\nu(\lambda).
+\end{equation}
+Calculamos los términos de las ecuaciones de Euler-Lagrange
+\begin{equation}
+	\partialD{\mathcal L}{\dot c^\alpha} = \frac12 g_{\mu\nu} \partialD{}{\dot c^\alpha}(\dot c^\mu \dot c^\nu)
+	= \frac12 g_{\mu\nu}(\dot c^\mu \delta\indices{^\nu_\alpha}  +\delta\indices{^\mu_\alpha} \dot c^\nu )
+	= \frac12 g_{\mu\alpha}\dot c^\mu + \frac12 g_{\alpha\nu}\dot c^\nu.
+\end{equation}
+Por la simetría de las componentes $g_{\mu\nu}$ y haciendo el cambio $\nu \to \mu$ en el segundo término,
+\begin{equation}
+	\partialD{\mathcal L}{\dot c^\alpha} = \frac12 g_{\alpha\mu}\dot c^\mu + \frac12 g_{\alpha\mu}\dot c^\mu
+	= g_{\alpha\mu}\dot c^\mu.
+\end{equation}
+Ahora ilustramos la necesidad de definir la derivada covariante.
+\begin{equation}
+\begin{split}
+	\frac{d}{d\lambda}\partialD{\mathcal L}{\dot c^\alpha}
+	&= g_{\alpha\mu}\ddot c^\mu + \dot g_{\alpha\mu}\dot c^\mu
+	= g_{\alpha\mu}\ddot c^\mu + \dot c^\mu\dot c^\nu g_{\alpha\mu,\nu}\\
+	 &= g_{\alpha\mu}\ddot c^\mu + \dot c^\mu\dot c^\nu(\innerp{\patch_{,\alpha}}{\patch_{,\mu,\nu}} + \innerp{\patch_{,\alpha, \nu}}{\patch_{,\mu}})\\
+	&=g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu  \left(
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} + \innerp{\patch_{,\mu,\nu}}{\vec N}\vec N} + \innerp*{\patch_{,\alpha; \nu} + \innerp{\patch_{,\alpha,\nu}}{\vec N}\vec N}{\patch_{,\mu}}
+	\right)\\
+	&= g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu  \left(
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} } + \innerp*{\patch_{,\alpha; \nu}}{\patch_{,\mu}}
+	\right)\\
+	&=  g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} } + \dot c^\mu\dot c^\nu \innerp*{\patch_{,\alpha; \nu}}{\patch_{,\mu}}.
+\end{split}
+\end{equation}
+Aprovechando la simetría del producto interno y de la derivada covariante.
+\begin{equation}
+	\frac{d}{d\lambda}\partialD{\mathcal L}{\dot c^\alpha}
+	= g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} } + \dot c^\mu\dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha} }.
+\end{equation}
+El cálculo del siguiente término es
+\begin{equation}
+\begin{split}
+	\partialD{\mathcal L}{c^\alpha} &= \frac12 \dot c^\mu \dot c^\nu \partialD{g_{\mu\nu}}{c^\alpha}
+	=  \frac12 \dot c^\mu \dot c^\nu  (\innerp{\patch_{,\mu}}{\patch_{,\nu,\alpha}} + \innerp{\patch_{,\mu, \alpha}}{\patch_{,\nu}})\\
+	&= \frac12 \dot c^\mu \dot c^\nu \left(
+	\innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha}} + \innerp*{\patch_{,\mu; \alpha}}{\patch_{,\nu}}
+	\right)\\
+	&=  \frac12 \dot c^\mu \dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha}}
+	+   \frac12 \dot c^\mu \dot c^\nu\innerp*{\patch_{,\mu; \alpha}}{\patch_{,\nu}}.
+\end{split}
+\end{equation}
+Intercambiamos los índices mudos $\mu$ y $\nu$ en el segundo término.
+\begin{equation}
+	\partialD{\mathcal L}{c^\alpha} = \frac12 \dot c^\mu \dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha}}
+	+   \frac12 \dot c^\mu \dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha}}
+	= \dot c^\mu \dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha}}.
+\end{equation}
+
+De la ecuación de Euler-Lagrange obtenemos
+\begin{equation}
+	g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} } + \dot c^\mu\dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha} } - \dot c^\mu \dot c^\nu \innerp*{\patch_{,\mu}}{\patch_{,\nu; \alpha}}
+	= g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} } = 0.
+\end{equation}
+Sustituyendo la ecuación \eqref{eq: covariant}
+\begin{equation}
+	 g_{\alpha\mu}\ddot c^\mu +  \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu; \nu} }
+	=  g_{\alpha\mu}\ddot c^\mu +  \ChrisSym{\beta}{\mu\nu} \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\beta} },
+\end{equation}
+intercambiamos los índices $\beta \leftrightarrow \mu$ en el segundo término.
+\begin{equation}
+	 g_{\alpha\mu}\ddot c^\mu +  \ChrisSym{\beta}{\mu\nu} \dot c^\mu\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\beta} }
+	= g_{\alpha\mu}\ddot c^\mu +  \ChrisSym{\mu}{\beta\nu} \dot c^\beta\dot c^\nu 
+	\innerp*{\patch_{,\alpha}}{\patch_{,\mu} }
+	= g_{\alpha\mu}\left( \ddot c^\mu +  \ChrisSym{\mu}{\beta\nu} \dot c^\beta\dot c^\nu  \right) = 0.
+\end{equation}
+Por la propiedad del difeomorfismo $\patch$ de que para toda $ \vec p \in \surface$ el plano $T_{\vec p}\surface$ es bidimensional y $\{\patch_{,1}(\vec q), \patch_{,2}(\vec p)\}$ es linealmente independiente, si todas las componentes de la métrica se anularan en algún punto $\vec p \in \surface$, entonces $g_{\mu\mu}(\vec p) = \norm{\patch_{,\mu}(\vec p)}^2 = 0$ y $\patch_{,\mu}(\vec p) = \vec 0$, por lo que $\{\patch_{,1}(\vec q), \patch_{,2}(\vec p)\}$ ya no sería linealmente independiente, lo cual es una contradicción.
+
+Podemos entonces enunciar lo siguiente.
+\begin{theorem}
+	Sean $\vec p, \vec q$ puntos en una superficie regular $\mathcal S$ y $\patch : U \to \surface$ un parche coordenado cuya imagen contiene a los puntos $\vec p, \vec q$, donde $U \subset \R^2$ es abierto y conexo. Entonces en $\overline U$ existe una curva regular $\vec c$ tal que $\bgamma = \patch \circ \vec c$ es una geodésica normalizada que une a $\vec p$ y $\vec q$.
+	
+	La curva $\vec c$ satisface la ecuación de la geodésica
+	\begin{equation}\label{eq: geodesicEq}
+		\ddot c^\alpha +  \ChrisSym{\alpha}{\mu\nu} \dot c^\mu\dot c^\nu = 0.
+	\end{equation}
+\end{theorem}
+
+\begin{remark}
+	Si escribimos la parametrización de $\vec c$ como $\vec c = (q^1(\lambda), q^2(\lambda))$, donde $q^1, q^2$ son las coordenadas locales de $\patch(U)$, podemos obtener la forma convencional de la ecuación de la geodésica.
+	\begin{equation}
+		\ddot q^\alpha +  \ChrisSym{\alpha}{\mu\nu} \dot q^\mu\dot q^\nu = 0.
+	\end{equation}
+\end{remark}
+
+\begin{remark}
+	Lo que vuelve a la ecuación \eqref{eq: geodesicEq} extraordinaria es que la curva que debe hallarse para formar una geodésica se encuentra dada en las coordenadas locales y no en términos de las coordenadas $x, y, z$ de $\R^3$ usadas en $\surface$.
+\end{remark}

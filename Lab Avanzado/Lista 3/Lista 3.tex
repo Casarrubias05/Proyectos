@@ -1,0 +1,340 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb, amscd, amsthm, amsfonts, mathtools, mathrsfs, tensor, braket, etoolbox}
+\mathtoolsset{showonlyrefs,showmanualtags}
+\usepackage{graphicx, wrapfig}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+urlcolor = cyan,
+linkcolor=blue,
+citecolor=brown}
+%\hypersetup{hidelinks} %hides red outline around links
+\usepackage[spanish,es-nodecimaldot, es-tabla,es-lcroman]{babel}
+\usepackage{siunitx}
+%\sisetup{separate-uncertainty}
+\DeclareSIUnit{\atm}{\text{atm}}
+
+\usepackage{upgreek}
+\usepackage[minimal = true]{chemmacros}
+
+\usepackage{cancel}
+\usepackage{multicol}
+
+\usepackage[lastexercise]{exercise}
+\renewcommand{\AtBeginExercise}{\itshape}
+
+% \numberwithin{equation}{section}
+
+\usepackage{booktabs}
+
+\setlength{\headheight}{14pt}
+
+\usepackage{lastpage}
+
+\usepackage[margin=2.5cm]{geometry}
+
+\usepackage{esint}
+\usepackage{booktabs}
+
+
+\usepackage{enumerate}
+\usepackage{nicefrac}
+
+
+%\usepackage{mathpazo}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{esint, csquotes}
+%\usepackage[
+%	style=apa
+%]{biblatex}
+%\addbibresource{Bibliografia.bib}
+%\usepackage{xurl}
+
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 40pt
+\marginparsep 10pt
+\topmargin -20pt
+\headsep 10pt
+\textheight 8.7in
+%\textwidth 6.65in
+
+\renewcommand{\vec}{\mathbf} %Reescribe a los vectores en negritas y no con una flechita
+\newcommand{\uniSym}[1]{\, \hat{\boldsymbol{#1}}}
+\newcommand{\univ}[1]{\hat{\mathbf{e}}_{#1}} % Facilita la escritura de vectores unitarios
+\newcommand{\basis}[1]{\mathbf{e}_{#1}}
+\newcommand{\eqcomma}{\,  ,}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\r}{\vec r}
+\newcommand{\eqperiod}{\,  .}
+\newcommand{\bfgreek}[1]{\bm{#1}}
+\newcommand{\surface}{\mathcal S}
+\newcommand{\tangent}{\boldsymbol{\mathfrak{t}}}
+\newcommand{\normal}{\boldsymbol{\mathfrak{n}}}
+\newcommand{\binormal}{\boldsymbol{\mathfrak{b}}}
+\newcommand{\bracket}[1]{\left\langle #1 \right\rangle}
+\newcommand{\jacobian}[2]{\frac{\partial(#1)}{\partial(#2)}}
+\newcommand{\EC}[1][1]{\frac{#1}{4\pi\epsilon_0}}
+
+
+\newcommand{\crossp}[2]{\vec{#1} \times \vec{#2}}
+
+\DeclarePairedDelimiter{\abs}{\lvert }{\rvert}
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterXPP{\lnorm}[2]{}{\lVert}{\rVert}{_\ifblank{#2}{2}{#2}}{\ifblank{#1}{\: \cdot \:}{#1}}
+\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{#1 \delimsize \vert \mathopen{} #2}
+\DeclarePairedDelimiterX{\scalarp}[2]{\langle}{\rangle}{#1 , #2}
+
+\newcommand{\ChrisSym}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\renewcommand{\ChrisSym}[2]{{\Gamma^{#1}}_{#2}}
+
+\newcommand{\Riemann}[2]{{R^{#1}}_{#2}}
+\renewcommand{\Riemann}[2]{R\indices{^{#1}_{#2}}}
+
+\newcommand{\partialD}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\derivative}[2]{\frac{d #1}{d #2}}
+
+\newcommand{\Matrix}[1]{\begin{pmatrix}#1\end{pmatrix}} 
+
+\renewcommand\qedsymbol{$\blacksquare$}%Hace un cuadrado negro el qed de una demostración
+\newtheorem{theorem}{Teorema} %Crea el entorno de teorema
+\newtheorem{corollary}{Corolario}
+\newtheorem{lemma}{Lema}
+\newtheorem{definition}{Definición}
+
+\newcommand{\eto}[1]{e^{#1}}
+\newcommand{\dgr}{^{\dagger}}
+\renewcommand{\div}[1]{\nabla \cdot \vec{#1}}
+\newcommand{\rot}[1]{\nabla \times \vec{#1}}
+\newcommand{\iGamma}[2][\infty]{\int_{0}^{#1} t^{#2}\eto{-t} \, dt}
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsenh}{arc\ senh}
+\DeclareMathOperator{\sign}{sign}
+
+\usepackage{fancyhdr}
+
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+
+\fancyhead[L]{Laboratorio Avanzado}
+\fancyhead[R]{\thepage\ de \pageref{LastPage}}
+
+
+\fancyfoot{}
+\fancyfoot[C]{Luis Arturo Ureña Casarrubias}
+%\fancyfoot[C]{\small Fernanda Arely Durán Ramirez}
+%\fancyfoot[R]{\small José Emmanuel Chávez Zepeda}
+
+
+\title{Laboratorio Avanzado: Lista 3}
+\author{Luis Arturo Ureña Casarrubias}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{Exercise}\end{Exercise}
+
+\begin{Answer}
+	Se nos pide demostrar la continuidad de la función en $\R$ definida por $f : x \mapsto x^3$. Es decir, que para cualquier $x_0 \in \R$ se cumple lo siguiente
+	\begin{equation}
+		\forall \varepsilon > 0\quad \exists \delta > 0 \ : \ \forall x \in \R \quad \ \abs{x - x_0} < \delta \Longrightarrow \abs*{x^3 - x_0^3} < \varepsilon.
+	\end{equation}
+	Si $x_0 = 0$, entonces podemos tomar $\delta = \epsilon$. Tomamos entonces el caso no evidente con $x_0$ diferente de cero.
+	Podemos factorizar $x^3 - x_0^3$ como
+	\begin{equation}
+		x^3 - x_0^3 = (x - x_0)(x^2 + x_0 x + x_0^2).
+	\end{equation}
+	El factor $x^2 + x_0 x + x_0^2$ es siempre positivo y no tiene raíces reales si $x_0 \neq 0$, pues la fórmula cuadrática da
+	\begin{equation}
+		x = \frac{-x_0 \pm \sqrt{x_0^2 - 4x_0^2}}{2} = \frac{-x_0 \pm i\sqrt 3 \abs{x_0}}{2}.
+	\end{equation}
+	Podemos entonces tomar $\delta = \varepsilon/(x^2 + x_0 x + x_0^2)$ y obtener
+	\begin{equation}
+		\abs*{x^3 - x_0^3} = \abs{x - x_0}(x^2 + x_0 x + x_0^2) <  \frac{\varepsilon}{x^2 + x_0 x + x_0^2}(x^2 + x_0 x + x_0^2) < \varepsilon.
+	\end{equation}
+	Luego, $f(x) = x^3$ es continua en $\R$.
+\end{Answer}
+
+\begin{Exercise}\end{Exercise}
+\begin{Answer}
+	\begin{lemma}
+		Las transformaciones lineales $A : \mathbb K^n \to \mathbb K^m$ son acotadas.
+	\end{lemma}
+	\begin{proof}
+		Recordemos que la $m \times n$ matriz $(A_{ij})$ de una transformación lineal $A \in \mathcal L(\mathbb K^n, \mathbb K^m)$ actuando sobre un vector $\vec x = (x_1, \dotsc, x_n)$ genera un vector $A\vec x$ cuya i-ésima entrada es
+		\begin{equation}
+			(A\vec x)_i = \sum_{j = 1}^n A_{ij} x_j.
+		\end{equation}
+		Podemos notar a su vez que
+			\begin{equation}
+			\abs{(A\vec x)_i} = \abs[\Bigg]{\sum_{j = 1}^n A_{ij} x_j} \le \sum_{j=1}^n \abs{A_{ij}}\abs{x_j},
+		\end{equation}
+		y por definición de $\lnorm{\vec x}{\infty}$,
+		\begin{equation}
+			\abs{(A\vec x)_i}
+			\le \sum_{j=1}^n \abs{A_{ij}}\abs{x_j}
+			\le \sum_{j=1}^n \abs{A_{ij}}\lnorm{\vec x}{\infty}
+			= \lnorm{\vec x}{\infty} \sum_{j=1}^n \abs{A_{ij}}.
+		\end{equation}
+		Entonces
+		\begin{equation}\label{eq: susp}
+			\lnorm{A\vec x}{\infty} = \max_{i = \overline{1,m}} \abs{(A\vec x)_i}
+			\le  \max_{i = \overline{1,m}} \biggl\{ \lnorm{\vec x}{\infty} \sum_{j=1}^n \abs{A_{ij}}\biggr\}
+			=   \lnorm{\vec x}{\infty}\max_{i = \overline{1,m}} \biggl\{ \sum_{j=1}^n \abs{A_{ij}}\biggr\}.
+		\end{equation}
+	Y como $\vec x \in \mathbb K^n$ es arbitrario, la transformación lineal $A$ es acotada.
+	\end{proof}
+	
+	\begin{theorem}
+		Sea $A \in \mathcal L(\mathbb K^n, \mathbb K^m)$, donde $\mathbb K^n, \mathbb K^m$ son espacios normados con la norma del máximo. Entonces $A \in \mathcal B(\mathbb K^n, \mathbb K^m)$ y su norma ``\emph{del máximo}'' puede obtenerse como
+		\begin{equation}
+			\lnorm{A}{\infty} = \lnorm{A}{{\mathcal B(\mathbb K^n, \mathbb K^m)}} = \max_{i = \overline{1,m}} \biggl\{ \sum_{j=1}^n \abs{A_{ij}}\biggr\}.
+		\end{equation}
+	\end{theorem}
+	
+	\begin{proof}
+	Del lema anterior podemos afirmar que una transformación lineal $A$ tiene una norma\par
+	$\lnorm{A}{{\mathcal B(\mathbb K^n, \mathbb K^m)}}$, y que esta satisface
+	\begin{equation}
+		\lnorm{A}{{\mathcal B(\mathbb K^n, \mathbb K^m)}} = \sup_{\vec x \in \mathbb K^n\backslash\{0\} }\frac{\lnorm{A\vec x}{\infty}}{\lnorm{\vec x}{\infty}}
+		\le  \max_{i = \overline{1,m}} \biggl\{ \sum_{j=1}^n \abs{A_{ij}}\biggr\}
+	\end{equation}
+	La igualdad se cumple si $A = 0$. Consideramos entonces el caso no evidente donde $A \neq 0$.
+	
+	La desigualdad \eqref{eq: susp} es una que satisfacen todas las normas, por lo que es tentador afirmar que
+	\begin{equation}
+		\lnorm{A}{{\mathcal B(\mathbb K^n, \mathbb K^m)}} = \max_{i = \overline{1,m}} \biggl\{ \sum_{j=1}^n \abs{A_{ij}}\biggr\}.
+	\end{equation}
+	Denotemos por el momento $\lnorm{A}{\infty} \coloneqq \max_{i = \overline{1,m}} \bigl\{ \sum_{j=1}^n \abs{A_{ij}}\bigr\}$.
+	
+	Consideremos ahora la matriz $(\abs{A_{ij}})$. Al multiplicarla por un vector $\vec x$ obtenemos un vector con entradas $\sum_{j = 1}^m \abs{A_{ij}} x_j, i = \overline{1,n}$. Sea $1 \le k \le m$ tal que $\sum_{j=1}^n \abs{A_{kj}} = \lnorm{A}{\infty}$. Podemos obtener de la sumatoria  $\sum_{j=1}^n A_{kj}$ del $k$-ésimo renglón a $\lnorm{A}{\infty}$ si elegimos
+	\begin{equation}
+		\vec y \coloneqq \left( \sign(A_{k1}),\dotsc, \sign(A_{kn}) \right),
+	\end{equation}
+	pues
+	\begin{equation}
+		(A\vec y)_k = \sum_{j = 1}^m \sign(A_{kj})A_{kj} = \sum_{j = 1}^m \abs{A_{kj}} = \lnorm{A}{\infty}.
+	\end{equation}
+	Consideremos ahora $i = \overline{1,n}$ arbitrario.
+	\begin{equation}
+		(A\vec y)_i = \sum_{j = 1}^m  \sign(A_{kj}) A_{ij}
+		\le \abs[\Bigg]{ \sum_{j = 1}^m \sign(A_{kj}) A_{ij}}
+		\le  \sum_{j = 1}^m \abs{\sign(A_{kj})} \abs{A_{ij}}.
+	\end{equation}
+	Como $\abs{\sign(A_{kj})}$ puede ser solo nulo o unitario, en la última suma algunos términos de la suma $\sum_{j = 1}^m \abs{A_{ij}}$ pueden estar omitidos, y como esta crece monotónicamente con cada término adicional,
+	\begin{equation}
+		(A\vec y)_i 
+		\le  \sum_{j = 1}^m \abs{\sign(A_{kj})} \abs{A_{ij}}
+		\le \sum_{j = 1}^m \abs{A_{ij}}
+		\le (A\vec y)_k.
+	\end{equation}
+	Por otra parte
+	\begin{equation}
+		(A\vec y)_i 
+		\ge  -\sum_{j = 1}^m \abs{\sign(A_{kj})} \abs{A_{ij}}
+		\ge -(A\vec y)_k.
+	\end{equation}
+	Luego $\abs{(A\vec y)_i } \le (A\vec y)_k \le \abs{(A\vec y)_k} $ para toda $i = \overline{1,n}$ y $\lnorm{A\vec y}{\infty} = \lnorm{A}{\infty}$
+	
+	Podemos estar seguros que $\lnorm{\vec y}{\infty} = 1$, pues, como ya mencionamos,  $\abs{\sign(A_{kj})}$ puede ser solo nulo o unitario, y si $\lnorm{\vec y}{\infty} = 0$ eso implicaría que
+	\begin{equation}
+		\sign(A_{kj}) = 0 \quad \forall j = \overline{1, n},
+	\end{equation}
+	y entonces $A_{kj} = 0 \Longrightarrow A = 0$, lo cual es una contradicción.
+	Entonces
+	\begin{equation}
+		\lnorm{A}{\infty} = \frac{\lnorm{A\vec y}{\infty}}{\lnorm{\vec y}{\infty}} \le \lnorm{A}{{\mathcal B(\mathbb K^n, \mathbb K^m)}}.
+	\end{equation}
+	Por lo tanto, podemos calcular la norma de una transformación lineal con su matriz $(A_{ij})$ como
+	\begin{equation}
+		\lnorm{A}{{\mathcal B(\mathbb K^n, \mathbb K^m)}} = \max_{i = \overline{1,m}} \biggl\{ \sum_{j=1}^n \abs{A_{ij}}\biggr\}.
+	\end{equation}
+	\end{proof}
+	
+	\begin{corollary}
+		Si tomamos $\mathbb K^n = \mathbb K^m = \R^N$ en el teorema anterior, de inmediato obtenemos que
+		\begin{equation}
+			\lnorm{A}{\infty} =  \max_{i = \overline{1,N}} \biggl\{ \sum_{j=1}^N \abs{A_{ij}}\biggr\}.
+		\end{equation}
+	\end{corollary}
+\end{Answer}
+
+\begin{Exercise}[number=5]
+\end{Exercise}
+\begin{Answer}
+	\begin{lemma}
+		Sea $f: \Omega \subset \mathbb C \to \mathbb C$ tal que, para algún $z_0 \in \Omega$, existe el límite
+		\begin{equation}
+			\lim_{z \to z_0} f(z) = w_0.
+		\end{equation}
+		Entonces
+		\begin{equation}
+			\lim_{z \to z_0}\bar f(z) = \bar w_0.
+		\end{equation}
+	\end{lemma}
+	\begin{proof}
+		Por la existencia del límite, tenemos los límites
+		\begin{equation}
+			\lim_{(x, y) \to (x_0, y_0)} u(x, y) = u_0, \quad \lim_{(x, y) \to (x_0, y_0)} v(x, y) = v_0, \qquad f(z) = u(x, y) + iv(x, y), \quad w_0 = u_0 + iv_0.
+		\end{equation}
+		Entonces
+		\begin{equation}
+			\lim_{z \to z_0}\bar f(z) = \lim_{(x, y) \to (x_0, y_0)} u(x, y) - i\lim_{(x, y) \to (x_0, y_0)} v(x, y) = u_0 - iv_0 = \bar w_0.
+		\end{equation}
+	\end{proof}
+	
+	\begin{corollary}
+		Sea ahora $f : I \subset \R \to \mathbb C$ diferenciable en $t_0 \in I$. Entonces
+		\begin{equation}
+			\frac{d}{dt}\bar f(t_0) = \bar f'(t_0).
+		\end{equation}
+	\end{corollary}
+	
+	\begin{proof}
+		Como $f$ es diferenciable en $t_0$, entonces existe el límite
+		\begin{equation}
+			f'(t_0) = \lim_{t \to t_0}\frac{f(t) - f(t_0)}{t - t_0}.
+		\end{equation}
+		Luego
+		\begin{equation}
+			\frac{d}{dt}\bar f(t_0) = \lim_{t \to t_0}\frac{\bar f(t) - \bar f(t_0)}{t - t_0}
+			= \lim_{t \to t_0}\overline{\frac{f(t) - f(t_0)}{t - t_0}}
+			= \bar f'(t_0).
+		\end{equation}
+	\end{proof}
+	Calculamos ahora $\overline {\mathcal L y(x)}$.
+	\begin{equation}
+		\overline {\mathcal L y(x)} = \overline{a_2(x) y''(x)} + \overline{a_1(x) y'(x)} + \overline{a_0(x) y(x)}
+		= a_2(x) \bar y''(x) + a_1(x) \bar y'(x) + a_0(x) \bar y(x)
+		= \mathcal L[\bar y](x).
+	\end{equation}
+\end{Answer}
+
+\begin{Exercise}
+\end{Exercise}
+\begin{Answer}
+	Omitiendo el parámetro $x$, derivamos $W[u, v]$.
+	\begin{equation}
+		\frac{d}{dx} W[u, v]= uv'' - u''v
+		= (-u'' + qu)v - u(-v'' + qv)
+		= (\mathcal Su)v - u(\mathcal S v).
+	\end{equation}
+	Y como las segundas derivadas de $u$ y $v$ son continuas en $[a,b]$, podemos hacer la integración
+	\begin{equation}
+		\int_{a}^{b}\bigl( v(x)\mathcal Su(x) - u(x)\mathcal S v(x) \bigr) \, dx = \int_{a}^{b}\frac{d}{dx} W[u, v] \, dx,
+	\end{equation}
+	y por el segundo teorema fundamental del cálculo,
+	\begin{equation}
+		\int_{a}^{b}\bigl( v(x)\mathcal Su(x) - u(x)\mathcal S v(x) \bigr) \, dx = W[u, v]\bigr\rvert_a^b.
+	\end{equation}
+\end{Answer}
+%\printbibliography
+
+\end{document}

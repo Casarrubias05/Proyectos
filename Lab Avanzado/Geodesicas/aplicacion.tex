@@ -1,0 +1,96 @@
+\section{Aplicaciones}
+En la práctica puede resultar engorroso calcular \textit{a priori} los símbolos de Christoffel, mientras que resulta más sencillo calcular las componentes de la métrica $g_{\mu\nu}$ dado un parche coordenado $\patch$. Por lo tanto, es más eficiente aplicar las ecuaciones de Euler-Lagrange directamente a \eqref{eq: lagrangian}.
+
+\paragraph{Prueba de Cordura}
+Antes de aplicar la ecuación de la geodésica a superficies regulares generales, verificaremos que la ecuación \eqref{eq: geodesicEq} coincide con un resultado bien establecido: las geodésicas en el plano.
+
+El parche coordenado evidente es $\patch(x, y) = (x, y, z)$, donde $z \in \R$ es constante. Entonces
+\begin{equation}
+	\patch_{,x} = \univ 1, \qquad \patch_{,y} = \univ 3.
+\end{equation}
+Es inmediato que $\ChrisSym{\alpha}{\mu\nu} = 0$ para todos las combinaciones de $\alpha, \mu,\nu = 1, 2$.
+Las ecuaciones geodésicas son entonces
+\begin{equation}
+	\ddot x = \ddot y = 0.
+\end{equation}
+Estas son las ecuaciones de una línea recta.
+
+\subsection{Geodésicas en la Esfera}
+Para el parche coordenado de una esfera de radio $R > 0$ empleamos las coordenas esféricas.
+\begin{equation}
+	\patch(\theta, \phi) = R(\sen \phi \cos \theta, \sen \phi \sen \theta, \cos \phi).
+\end{equation}
+Calculamos las componentes de la métrica.
+\begin{equation}
+	\patch_{,\theta} = R(-\sen \phi \sen \theta, \sen \phi \cos \theta,0), \qquad
+	\patch_{,\phi} = R(\cos \phi \cos \theta, \cos \phi \sen \theta, -\sen\phi)
+\end{equation}
+Luego
+\begin{gather}
+	g_{\theta\theta} = R^2(\sen^2\phi \sen^2\theta + \sen^2\phi \cos^2 \theta)
+	= R^2\sen^2\phi, \\
+		g_{\theta\phi} = R^2(-\sen\phi \cos \phi \sen \theta \cos \theta + \sen\phi \cos \phi \sen \theta \cos \theta) = 0 = g_{\phi\theta},\\
+	g_{\phi\phi} = R^2(\cos^2\phi \cos^2\theta + \cos^2\phi \sen^2 \theta + \sen^2\phi) = R^2.
+\end{gather}
+Omitiendo el parámetro, el lagrangiano relevante es
+\begin{equation}
+	\mathcal L = \frac12 (g_{\phi\phi}\dot \phi^2 + g_{\theta\theta} \dot\theta^2)
+	= \frac{R^2}{2}(\dot \phi^2 +  \dot \theta^2\sen^2\phi).
+\end{equation}
+Al aplicar las ecuaciones de Euler-Lagrange para $\theta$ obtenemos
+\begin{equation}
+	\partialD{\mathcal L}{\theta} = 0, \qquad
+	 \partialD{\mathcal L}{\dot \theta} = R^2 \dot \theta \sen^2\phi, \qquad
+	 \frac{d}{d\lambda}\partialD{\mathcal L}{\dot \theta}  = R^2 (\ddot \theta\sen^2\phi  + \sen(2\phi)\dot \phi \dot \theta).
+\end{equation}
+Luego, para la coordenada $\theta$ la ecuación geodésica es
+\begin{equation}
+	R^2 ( \ddot \theta\sen^2\phi  + \sen(2\phi)\dot \phi \dot \theta)  = 0 \Longrightarrow \ddot \theta + 2 \dot \theta \dot \phi \cot \phi= 0.
+\end{equation}
+
+Para $\phi$, las ecuaciones son
+\begin{equation}
+	\partialD{\mathcal L}{\phi} = \frac{R^2}{2}\sen(2\phi)\dot \theta^2, \qquad
+	 \partialD{\mathcal L}{\dot \phi} = R^2 \dot \phi, \qquad
+	 \frac{d}{d\lambda}\partialD{\mathcal L}{\dot \phi}  = R^2 \ddot \phi.
+\end{equation}
+Luego,
+\begin{equation}
+	R^2 \ddot \phi - \frac{R^2}{2}\sen(2\phi)\dot \theta^2 = 0 \Longrightarrow \ddot \phi - \frac{1}{2}\sen(2\phi)\dot \theta^2 = 0.
+\end{equation}
+
+\begin{remark}
+De estas ecuaciones podemos obtener de forma inmediata los símbolos de Christoffel para coordenadas esféricas.
+\begin{equation}
+	\ChrisSym{\theta}{\theta\theta} = \ChrisSym{\theta}{\phi\phi} = 0, \qquad \ChrisSym{\theta}{\theta\phi} = \cot \phi, \qquad \ChrisSym{\phi}{\theta\theta} = -\frac12 \sen (2\phi), \qquad \ChrisSym{\phi}{\phi\phi} = \ChrisSym{\phi}{\theta\phi} = 0.
+\end{equation}
+\end{remark}
+
+Emplearemos el siguiente resultado de análsis.
+\begin{proposition}
+	Sea $\vec c \in C^1(I, \R^2)$ una curva regular que parametriza a la gráfica de la función $y = f(x)$. Si $\vec c(\lambda) = (x(\lambda), y(\lambda))$, entonces
+	\begin{equation}
+		y'(x(\lambda)) = \frac{dy}{dx}(x(\lambda)) = \frac{\dot y (\lambda)}{\dot x(\lambda)}.
+	\end{equation}
+\end{proposition}
+
+Podemos escribir las ecuaciones geodésicas en términos de la métrica como
+\begin{equation}
+	\ddot \theta + \frac{g_{\theta\theta,\phi}}{g_{\theta\theta}}\dot\theta\dot\phi = 0, \qquad \ddot \phi - \frac{g_{\theta\theta,\phi}}{2R^2}\dot \theta^2 = 0.
+\end{equation}
+Podemos combinarlas como
+\begin{equation}
+	\begin{split}
+		\ddot \theta \dot \phi - \dot\theta\ddot \phi + \frac{g_{\theta\theta,\phi}}{g_{\theta\theta}}\dot\theta\dot\phi^2 + \frac{g_{\theta\theta,\phi}}{2R^2}\dot \theta^3 &= 0\\
+		\frac{\dot \phi}{\dot \theta}\frac{\ddot \theta \dot \phi - \dot\theta\ddot \phi}{\dot \theta^2} + \left(\frac{g_{\theta\theta,\phi}}{g_{\theta\theta}}\dot\phi \right)\frac{\dot \phi^2}{\dot \theta^2} + \frac{g_{\theta\theta,\phi}}{2R^2}\dot \phi &= 0\\
+		2g^2_{\theta\theta}\frac{\dot \phi}{\dot \theta} \frac{d}{d\lambda}\frac{\dot \phi}{\dot \theta} + 2g_{\theta\theta} g_{\theta\theta,\phi}\dot \phi \left(\frac{\dot \phi}{\dot \theta}\right)^2 + \frac{g^2_{\theta\theta}g_{\theta\theta,\phi}}{R^2}\dot \phi &= 0\\
+		g^2_{\theta\theta} \frac{d}{d\lambda}\left(\frac{\dot \phi}{\dot \theta}\right)^2
+		+ \frac{d}{d\lambda}g^2_{\theta\theta}\left(\frac{\dot \phi}{\dot \theta}\right)^2
+		+ \frac{d}{d\lambda}\frac{g^3_{\theta\theta}}{3R^2} &= 0.
+	\end{split}
+\end{equation}
+Si denotamos a $\phi'(\theta) = d\phi/d\theta$, por la regla del producto y por la proposición anterior obtenemos la primera integral de la geodésica.
+\begin{equation}
+	\frac{d}{d\lambda}\left(g^2_{\theta\theta}\phi'^2 + \frac{g^3_{\theta\theta}}{3R^2} \right) = 0.
+\end{equation}
+Una solución inmediata es $\phi = \pi/2$, pues $\phi' = 0$ y $g_{\theta\theta} = R^2\sen^2(\pi/2) = 1$. Esto implicaría que la curva sería un segmento del ecuador de la esfera: la geodésica es un arco de un \emph{círculo máximo}.

@@ -1,0 +1,265 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{carmo-1974}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71880bb76184c460b235bae5eb6ffffd}{%
+           family={Carmo},
+           familyi={C\bibinitperiod},
+           given={Manfredo\bibnamedelimb P.\bibnamedelimi Do},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser}%
+      }
+      \strng{namehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{fullhash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{bibnamehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{authorbibnamehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{authornamehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{authorfullhash}{71880bb76184c460b235bae5eb6ffffd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Riemannian Geometry}
+      \field{year}{1974}
+      \field{dateera}{ce}
+    \endentry
+    \entry{clapp-2010}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0dd414841e5196f65545dbc842602ef8}{%
+           family={Clapp},
+           familyi={C\bibinitperiod},
+           given={Mónica},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {mx}%
+      }
+      \strng{namehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{fullhash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{bibnamehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{authorbibnamehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{authornamehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{authorfullhash}{0dd414841e5196f65545dbc842602ef8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Introducción al Análisis Real}
+      \field{year}{2010}
+      \field{dateera}{ce}
+    \endentry
+    \entry{gelfand-1975}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1bd7646c07653dfa91f3475f26c285d2}{%
+           family={Gelfand},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=d745785b24bd7d02900122ba5d349103}{%
+           family={Fomin},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall, Inc.}%
+      }
+      \strng{namehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{fullhash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{bibnamehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{authorbibnamehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{authornamehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{authorfullhash}{032a75bd0c88d3f846c83e7845c48103}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Calculus of Variations}
+      \field{year}{1975}
+      \field{dateera}{ce}
+    \endentry
+    \entry{tapp-2016}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=55e3203d3601694ea6a617ad6cb134a4}{%
+           family={Tapp},
+           familyi={T\bibinitperiod},
+           given={Kristopher},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{fullhash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{bibnamehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{authorbibnamehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{authornamehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{authorfullhash}{55e3203d3601694ea6a617ad6cb134a4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{9}
+      \field{title}{Differential Geometry of Curves and Surfaces}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{carmo-1974}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71880bb76184c460b235bae5eb6ffffd}{%
+           family={Carmo},
+           familyi={C\bibinitperiod},
+           given={Manfredo\bibnamedelimb P.\bibnamedelimi Do},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser}%
+      }
+      \strng{namehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{fullhash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{bibnamehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{authorbibnamehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{authornamehash}{71880bb76184c460b235bae5eb6ffffd}
+      \strng{authorfullhash}{71880bb76184c460b235bae5eb6ffffd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Riemannian Geometry}
+      \field{year}{1974}
+      \field{dateera}{ce}
+    \endentry
+    \entry{clapp-2010}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0dd414841e5196f65545dbc842602ef8}{%
+           family={Clapp},
+           familyi={C\bibinitperiod},
+           given={Mónica},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {mx}%
+      }
+      \strng{namehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{fullhash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{bibnamehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{authorbibnamehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{authornamehash}{0dd414841e5196f65545dbc842602ef8}
+      \strng{authorfullhash}{0dd414841e5196f65545dbc842602ef8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Introducción al Análisis Real}
+      \field{year}{2010}
+      \field{dateera}{ce}
+    \endentry
+    \entry{gelfand-1975}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1bd7646c07653dfa91f3475f26c285d2}{%
+           family={Gelfand},
+           familyi={G\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=d745785b24bd7d02900122ba5d349103}{%
+           family={Fomin},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice-Hall, Inc.}%
+      }
+      \strng{namehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{fullhash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{bibnamehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{authorbibnamehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{authornamehash}{032a75bd0c88d3f846c83e7845c48103}
+      \strng{authorfullhash}{032a75bd0c88d3f846c83e7845c48103}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Calculus of Variations}
+      \field{year}{1975}
+      \field{dateera}{ce}
+    \endentry
+    \entry{tapp-2016}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=55e3203d3601694ea6a617ad6cb134a4}{%
+           family={Tapp},
+           familyi={T\bibinitperiod},
+           given={Kristopher},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{fullhash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{bibnamehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{authorbibnamehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{authornamehash}{55e3203d3601694ea6a617ad6cb134a4}
+      \strng{authorfullhash}{55e3203d3601694ea6a617ad6cb134a4}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{9}
+      \field{title}{Differential Geometry of Curves and Surfaces}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

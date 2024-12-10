@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb, amscd, amsthm, amsfonts, mathtools, mathrsfs, tensor, braket, etoolbox}
+\mathtoolsset{showonlyrefs,showmanualtags}
+\usepackage{graphicx, wrapfig}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+urlcolor = cyan,
+linkcolor=blue,
+citecolor=brown}
+%\hypersetup{hidelinks} %hides red outline around links
+\usepackage[spanish,es-nodecimaldot, es-tabla,es-lcroman]{babel}
+\usepackage{siunitx}
+%\sisetup{separate-uncertainty}
+\DeclareSIUnit{\atm}{\text{atm}}
+
+\usepackage{upgreek}
+\usepackage[minimal = true]{chemmacros}
+
+\usepackage{cancel}
+\usepackage{multicol}
+
+\usepackage[lastexercise]{exercise}
+\renewcommand{\AtBeginExercise}{\itshape}
+
+\usepackage{titlesec}
+ \numberwithin{equation}{section}
+
+\usepackage{booktabs}
+
+\setlength{\headheight}{14pt}
+
+\usepackage{lastpage}
+
+\usepackage[margin=2.5cm]{geometry}
+
+\usepackage{esint}
+\usepackage{booktabs}
+
+
+\usepackage{enumerate}
+\usepackage{nicefrac}
+
+
+%\usepackage{mathpazo}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{esint, csquotes}
+\usepackage[
+	style=apa
+]{biblatex}
+\addbibresource{Bibliografia.bib}
+\usepackage{xurl}
+
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\marginparwidth 40pt
+\marginparsep 10pt
+\topmargin -20pt
+\headsep 10pt
+\textheight 8.7in
+%\textwidth 6.65in
+
+\renewcommand{\vec}{\mathbf} %Reescribe a los vectores en negritas y no con una flechita
+\newcommand{\uniSym}[1]{\, \hat{\boldsymbol{#1}}}
+\newcommand{\univ}[1]{\hat{\mathbf{e}}_{#1}} % Facilita la escritura de vectores unitarios
+\newcommand{\basis}[1]{\mathbf{e}_{#1}}
+\newcommand{\eqcomma}{\,  ,}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\r}{\vec r}
+\newcommand{\eqperiod}{\,  .}
+\newcommand{\bfgreek}[1]{\bm{#1}}
+\newcommand{\bgamma}{\boldsymbol{\gamma}}
+\newcommand{\surface}{\mathcal S}
+\newcommand{\patch}{\boldsymbol{\sigma}}
+\newcommand{\tangent}{\boldsymbol{\mathfrak{t}}}
+\newcommand{\normal}{\boldsymbol{\mathfrak{n}}}
+\newcommand{\binormal}{\boldsymbol{\mathfrak{b}}}
+\newcommand{\jacobian}[2]{\frac{\partial(#1)}{\partial(#2)}}
+\newcommand{\EC}[1][1]{\frac{#1}{4\pi\epsilon_0}}
+
+
+\newcommand{\crossp}[2]{\vec{#1} \times \vec{#2}}
+
+\DeclarePairedDelimiter{\abs}{\lvert }{\rvert}
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{\ifblank{#1}{\:\cdot\:}{#1}}
+\DeclarePairedDelimiterXPP{\lnorm}[2]{}{\lVert}{\rVert}{_\ifblank{#2}{2}{#2}}{\ifblank{#1}{\: \cdot \:}{#1}}
+\DeclarePairedDelimiterX{\innerp}[2]{\langle}{\rangle}{\ifblank{#1}{\:\cdot\:}{#1} \delimsize \vert \mathopen{} \ifblank{#2}{\:\cdot\:}{#2}}
+\DeclarePairedDelimiterX{\scalarp}[2]{\langle}{\rangle}{#1 , #2}
+
+\newcommand{\ChrisSym}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\renewcommand{\ChrisSym}[2]{{\Gamma^{#1}}_{#2}}
+\DeclareMathOperator{\Span}{span}
+
+\newcommand{\Riemann}[2]{{R^{#1}}_{#2}}
+\renewcommand{\Riemann}[2]{R\indices{^{#1}_{#2}}}
+
+\newcommand{\partialD}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\derivative}[2]{\frac{d #1}{d #2}}
+
+\newcommand{\Matrix}[1]{\begin{pmatrix}#1\end{pmatrix}} 
+
+\renewcommand\qedsymbol{$\blacksquare$}%Hace un cuadrado negro el qed de una demostración
+\newtheorem{theorem}{Teorema}[section] %Crea el entorno de teorema
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{remark}[theorem]{Observación}
+
+\newcommand{\eto}[1]{e^{#1}}
+\newcommand{\dgr}{^{\dagger}}
+\renewcommand{\div}[1]{\nabla \cdot \vec{#1}}
+\newcommand{\rot}[1]{\nabla \times \vec{#1}}
+\newcommand{\iGamma}[2][\infty]{\int_{0}^{#1} t^{#2}\eto{-t} \, dt}
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsenh}{arc\ senh}
+
+\usepackage{fancyhdr}
+
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+
+\fancyhead[L]{}
+\fancyhead[R]{\thepage\ de \pageref{LastPage}}
+
+
+\fancyfoot{}
+\fancyfoot[C]{Luis Arturo Ureña Casarrubias}
+%\fancyfoot[C]{\small Fernanda Arely Durán Ramirez}
+%\fancyfoot[R]{\small José Emmanuel Chávez Zepeda}
+
+
+\title{Laboratorio Avanzado\\
+{\Large Geodésicas en Superficies}}
+\author{Luis Arturo Ureña Casarrubias}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+En el mundo tridimensional euclidiano (plano) en que habitamos, el concepto de \emph{geodésica} es fácil de explicar y aún más fácil de realizar: es la línea más corta que une dos puntos, y se puede ``hallar'' expéditamente: traza una línea recta que una a los dos puntos. Si la cuestión de hallar esta línea recta se le planteara a alguien con conocimientos elementales de física, contestaría:
+\begin{quotation}
+	Suponiendo que tú y una pelota se encuentren en un vacío (región del espacio ausente de materia y energía adicional), coloca a la pelota en el punto inicial $p$ y dale un empujón en dirección al punto final $q$. La trayectoria que recorrera es una línea recta.
+\end{quotation}
+Todo esto bajo la suposición de encontrar un vacío ideal como se ha descrito. Y más aún, todo lo discutido hasta ahora bajo el supuesto de que estamos tratando con un mundo euclidiano.
+
+En los espacios o superficies curvos, que es en esto últimos en lo que nos enfocaremos en este trabajo, es de interés, tanto práctico como puramente matemático, generalizar la noción de \emph{línea recta} a estos objetos. En específico, la propiedad \emph{minimizadora} sobre la distancia que posee.
+
+Existen otras caracterizaciones de las curvas geodésicas en una superficie bidimensional, la más sencilla de ellas es una curva cuya aceleración es siempre perpendicular a la superficie. La intuición detrás de esta definición es: imagínemonos que un conductor en su coche busca seguir una ``línea recta'' desde su perspectiva sobre la superficie, manteniendo una rapidez constante; para conseguir esto no debe girar ni a su derecha ni a su izquierda. Pero si su recorrido es curvo, por estar sobre una superficie curva, y no acelera en la dirección de su movimiento, la única dirección hacia la cual se puede doblar es ``\emph{hacia afuera}'' de la superficie. Entonces su aceleración, si es que la tiene, debe ser ortogonal a la superficie que recorre.
+
+Esta y otras caracterizaciones que requieren conceptos adicionales, son equivalentes, por lo que nosotros trabajaremos con una geodésica como la curva que une dos puntos y tiene la menor longitud posible.
+
+\input{CVV}
+
+\input{Superficies}
+
+\input{distance}
+
+\input{ecuacion}
+
+\input{aplicacion}
+
+
+\newpage
+
+\printbibliography
+\nocite{}
+
+
+
+\end{document}
